@@ -17,7 +17,9 @@
         "password": "$2b$12$AtyXQECzt6kV07OZe6NqOuGD9AssY2NiLQDRNROdZPL8lpU2F4F7e",
         "address": "cairo",
         "phone": "0123456789",
-        "wishlist": [],
+        "wishlist": [
+            3
+        ],
         "cart": {},
         "orders": [
             {
@@ -140,6 +142,33 @@
                 "total": 20,
                 "order_date": "2024-10-20T11:24:12.857906",
                 "order_id": "ORD-20241020112412"
+            },
+            {
+                "customerInfo": {
+                    "name": "",
+                    "address": "",
+                    "city": "",
+                    "country": "",
+                    "postcode": "",
+                    "phone": "",
+                    "email": "",
+                    "order_notes": ""
+                },
+                "cart": [
+                    {
+                        "description": "Large, colorful blooms perfect for garden landscapes.",
+                        "id": 3,
+                        "inStock": true,
+                        "name": "Hydrangea",
+                        "price": 50,
+                        "quantity": 4,
+                        "thumbnail": "../static/images/p3.png",
+                        "type": "Biennial"
+                    }
+                ],
+                "total": 200,
+                "order_date": "2024-10-20T12:57:31.735279",
+                "order_id": "ORD-20241020125731"
             }
         ]
     },
