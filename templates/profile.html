@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/profile.css" />
+    <title>User Profile</title>
+    
+</head>
+<body>
+    <div class="profile">
+        <h1>User Profile</h1>
+        <div id="profile-info" class="profile-info"></div>
+        <div id="orders" class="orders">
+            <h2>Past Orders</h2>
+            <div id="orders-list"></div>
+        </div>
+        <p><a href="{{ url_for('base') }}" class="button">Back to Home</a> <a href="{{ url_for('logout') }}" class="button">Logout</a></p>
+    </div>
+    
+    <script src="../static/js/profile.js"></script>
+</body>
+</html>
