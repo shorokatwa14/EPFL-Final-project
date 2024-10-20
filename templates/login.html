@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--===============title======================-->
+    <title>Flowers store</title>
+    <!--===============CSS======================-->
+    <link rel="stylesheet" href="../static/css/auth.css">
+
+    <!--===============fav icon======================-->
+    <link rel="shortcut icon" href="../static/images/fav-icon.png"/>
+    <!--===============fonts======================-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="form">
+      <!--**login**.........-->
+      <div class="login-form">
+      
+        <!--heading-->
+        <strong>Log In</strong>
+        <!--inputs-->
+        <form action='/login' method="post">
+          <input type="email" name="email" placeholder="Example@gmail.com" required/>
+          <input type="password" name="password" placeholder="Password" required/>
+          <input type="submit" value="Log In"/>
+        </form>
+        <!--btns-->
+        <div class="form-btns">
+          <a href="{{ url_for('pass_page') }}" class="forget">Forget Your Password?</a>
+          <a href="{{ url_for('signup') }}" class="sign-up-btn">Create Account</a>
+        </div>
+      </div>
+    </div>
+    <script>
+      document.querySelector('form').addEventListener('submit', function (e) {
+        e.preventDefault();
+    
+        const email = document.querySelector('input[name="email"]').value;
+        const password = document.querySelector('input[name="password"]').value;
+    
+        fetch('/login', {
+          method: 'POST',
+          body: new URLSearchParams({ email, password }),
+          headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+          },
+        })
+        .then(response => response.json())
+        .then(data => {
+          if (data.id) {
+            localStorage.setItem('user', JSON.stringify(data));
+            window.location.href = '/home';
+          } else {
+            alert(data.error);
+          }
+        })
+        .catch(err => console.error(err));
+      });
+    
+      
+      function checkUserSession() {
+        const user = localStorage.getItem('user');
+        if (user) {
+          const userData = JSON.parse(user);
+          console.log("Logged in user:", userData);
+        } else {
+          console.log("No user logged in.");
+        }
+      }
+    
+      window.onload = checkUserSession;
+    </script>
+    
+  </body>
+</html>
