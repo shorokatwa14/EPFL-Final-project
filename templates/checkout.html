@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Checkout</title>
+    <style>
+       
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .billing-details, .cart-totals {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        h1, h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .breadcrumb {
+            margin-bottom: 20px;
+            color: #666;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .product-item {
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            gap: 15px;
+            margin-bottom: 15px;
+            align-items: center;
+        }
+
+        .product-image {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+        }
+
+        .product-details {
+            color: #333;
+        }
+
+        .product-price {
+            color: #666;
+            text-align: right;
+        }
+
+        .totals {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+
+        .total-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .payment-methods {
+            margin-top: 20px;
+        }
+
+        .payment-methods label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .place-order {
+            background-color: #f74b65;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .place-order:hover {
+            background-color: #d389a8;
+        }
+
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+
+        .success-dialog {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            z-index: 1000;
+            width: 90%;
+            max-width: 400px;
+        }
+
+        .success-dialog h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .success-dialog p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .success-icon {
+            width: 64px;
+            height: 64px;
+            margin: 0 auto 20px;
+            color: #f74b65;
+        }
+
+        .success-dialog button {
+            background-color: #f74b65;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+        }
+
+        .success-dialog button:hover {
+            background-color: #ce8d96;
+        }
+        
+    </style>
+</head>
+
+<body>
+        <h1>Checkout</h1>
+        <div class="container">
+            <div class="billing-details">
+                <h2>Billing Details</h2>
+                <form id="checkout-form">
+                    <input type="text" name="name" placeholder="Name" required>
+                    <input type="text" name="address" placeholder="Address" required>
+                    <input type="text" name="city" placeholder="City" required>
+                    <input type="text" name="country" placeholder="Country" required>
+                    <input type="text" name="postcode" placeholder="Postcode" required>
+                    <input type="tel" name="phone" placeholder="Phone" required>
+                    <input type="email" name="email" placeholder="Email" required>
+
+                    <h3>Additional Information</h3>
+                    <textarea name="order_notes" placeholder="Order notes (optional)" rows="4"></textarea>
+                </form>
+            </div>
+
+            <div class="cart-totals">
+                <h2>Cart Totals</h2>
+                <div id="cart-items">
+                    <!-- Products will be inserted here -->
+                </div>
+
+                <div class="totals">
+                    <div class="total-row">
+                        <span>Subtotal</span>
+                        <span id="subtotal">$0.00</span>
+                    </div>
+                    <div class="total-row">
+                        <span>Shipping</span>
+                        <span>Free Shipping</span>
+                    </div>
+                    <div class="total-row">
+                        <strong>Total</strong>
+                        <strong id="total">$0.00</strong>
+                    </div>
+                </div>
+
+                <button onclick="placeOrder()" class="place-order">Place Order</button>
+            </div>
+        </div>
+
+        <div class="overlay" id="overlay"></div>
+        <div class="success-dialog" id="successDialog">
+            <div class="success-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+            </div>
+            <h3>Order Created Successfully!</h3>
+            <p>Your order details will be sent to your email.</p>
+            <button onclick="hideSuccessDialog()">OK</button>
+        </div>
+
+        <script src="../static/js/checkout.js"></script>
+    </body>
+
+</html>
