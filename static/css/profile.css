@@ -1,0 +1,77 @@
+:root {
+    --primary-color: #f74b65;
+    --secondary-color: #99556a;
+    --background-color: #ecf0f1;
+    --text-color: #333;
+    --card-background: #fff;
+}
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+.profile {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: var(--card-background);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+h1, h2 {
+    color: var(--secondary-color);
+    text-align: center;
+    margin-bottom: 20px;
+}
+.profile-info, .orders {
+    margin-top: 30px;
+}
+.profile-info p, .orders p {
+    margin: 15px 0;
+    font-size: 16px;
+}
+.label {
+    font-weight: bold;
+    display: inline-block;
+    width: 120px;
+    color: var(--primary-color);
+}
+.error {
+    color: #e74c3c;
+    text-align: center;
+    font-weight: bold;
+}
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+a:hover {
+    color: #ad3d8b
+}
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    margin: 10px 5px;
+    transition: background-color 0.3s ease;
+}
+.button:hover {
+    background-color: var(--secondary-color);
+}
+.order-item {
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+.order-item:hover {
+    transform: translateY(-5px);
+}
