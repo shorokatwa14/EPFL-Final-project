@@ -1,22 +1,12 @@
 [
     {
         "name": "shams",
-        "email": "shorokatwa@gmail.com",
-        "id": "145f5225-a211-4e9c-a47d-08e88f392db9",
-        "password": "$2b$12$tFiPWa10jgiQNvhCPxa3JONGuOLgUYzQ0rkaI.vduEqvhL/FSlste",
-        "address": "cairo",
-        "phone": "0123456789",
-        "wishlist": [],
-        "cart": {},
-        "orders": []
-    },
-    {
-        "name": "shams",
         "email": "shorokrashid14@gmail.com",
         "id": "4a28c408-7748-4cbc-89a5-6c6d5e11e3be",
         "password": "$2b$12$AtyXQECzt6kV07OZe6NqOuGD9AssY2NiLQDRNROdZPL8lpU2F4F7e",
         "address": "cairo",
         "phone": "0123456789",
+        "security_question": "shams",
         "wishlist": [
             3
         ],
@@ -179,6 +169,7 @@
         "password": "$2b$12$Y8.IpQ3WyQYzJmC5SYKgjePfmLqoesZW/bT8NDHNUmtwPqZy4.NHO",
         "address": "Ismailia",
         "phone": "01201322714",
+        "security_question": "salma",
         "wishlist": [
             1,
             8,
@@ -302,15 +293,14 @@
             }
         ]
     },
+    
     {
-        "name": "shams",
-        "email": "shorokrashid14@gmail.com",
-        "id": "43cb33c4-96bb-4b16-9c13-84b4f5469489",
-        "password": "$2b$12$dHi9jjGcrJ0AImyX5hu7D.o9Xw5ia8OPOPvxqNjIw4YbOTXL9AMHK",
-        "address": "cairo",
-        "phone": "0123456789",
-        "wishlist": [],
-        "cart": {},
-        "orders": []
+        "name": "Gottfried Wilhelm Leibniz",
+        "email": "test@beispiel.de",
+        "id": "6149cf73-e079-47f2-b641-62737c1357a9",
+        "password": "$2b$12$oCS2VO1uypJSYobAwrjrg.zYMQn4irLg4vL.vAvnu2h7w66B0F2OG",
+        "address": "Erfundene Stra\u00dfe 33",
+        "phone": "030303986300",
+        "security_question": "Wilhelm"
     }
 ]
