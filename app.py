@@ -141,7 +141,7 @@ def signup():
 
         email = email_valid[1]
 
-        userdb_path = '../usersDB.json'
+        userdb_path = 'usersDB.json'
         if os.path.exists(userdb_path):
             with open(userdb_path, 'r') as file:
                 userdb = json.load(file)
