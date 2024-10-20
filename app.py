@@ -18,8 +18,8 @@ class User:
         self.address = address
         self.phone = phone
         self.id = uuid.uuid4()
-        self.wishlist = []  # Added a wishlist field
-        self.cart = {}      # Added a cart field
+        self.wishlist = []  
+        self.cart = {}      
         self.orders = []
 
     def hash_password(self):
@@ -34,8 +34,8 @@ class User:
             "password": hashed_password.decode('utf-8'),
             "address": self.address,
             "phone": self.phone,
-            "wishlist": self.wishlist,  # Store wishlist
-            "cart": self.cart,           # Store cart
+            "wishlist": self.wishlist,  
+            "cart": self.cart,          
             "orders": self.orders
         }
         try:
@@ -50,7 +50,6 @@ class User:
 
     @staticmethod
     def update_user_data(user_id, updated_data):
-        """Update the user data in usersDB.json"""
         try:
             with open('usersDB.json', 'r') as file:
                 users_list = json.load(file)
@@ -181,34 +180,6 @@ def login():
 
         return render_template('login.html')
 
-    
-    if (request.method == 'POST'):
-        email = request.form.get('email')
-        password = request.form.get('password')
-        users_list = []
-        with open('usersDB.json') as file:
-            users_list = json.load(file)
-
-        if(not email or not password):
-            return render_template('login.html', error = 'Please enter email and password') 
-        
-        email_valid = email_validation(email)
-        if(not email_valid[0]):
-            return render_template('login.html', error = email_valid[1])
-                
-        email = email_valid[1]
-
-        for user in users_list:
-            if(email == user["email"] and check_password(password, user["password"])):
-                session['user'] = user["id"]
-                return redirect('/home')
-            
-        return render_template('login.html', error = 'Invalid email or password' ) 
-    else:
-        if(session.get('user')):
-            return redirect('/home')
-
-        return render_template('login.html')
 
 @app.route('/pass_page')
 def pass_page():
@@ -398,9 +369,9 @@ def add_to_cart():
         for user in users_list:
             if user['id'] == user_id:
                 if product_id in user['cart']:
-                    user['cart'][product_id] += quantity  # Increment quantity if product is already in cart
+                    user['cart'][product_id] += quantity  
                 else:
-                    user['cart'][product_id] = quantity  # Add product to cart
+                    user['cart'][product_id] = quantity  
                 break
 
         with open("usersDB.json", "w") as file:
@@ -426,7 +397,7 @@ def remove_from_cart():
         for user in users_list:
             if user['id'] == user_id:
                 if product_id in user['cart']:
-                    del user['cart'][product_id]  # Remove product from cart
+                    del user['cart'][product_id]  
                 break
 
         with open("usersDB.json", "w") as file:
@@ -455,7 +426,7 @@ def remove_quantity_from_cart():
                 if product_id in user['cart']:
                     user['cart'][product_id] -= quantity
                     if user['cart'][product_id] <= 0:
-                        del user['cart'][product_id]  # Remove item if quantity is 0 or less
+                        del user['cart'][product_id]  
                 break
 
         with open("usersDB.json", "w") as file:
@@ -479,7 +450,6 @@ def get_cart_items():
 
         user = next((user for user in users_list if user['id'] == user_id), None)
 
-        # Check if user exists and has a cart, otherwise set cart_items to empty
         cart_items = user['cart'] if user and 'cart' in user else {}
         
         cart_products = []
