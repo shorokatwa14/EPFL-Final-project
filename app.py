@@ -5,18 +5,22 @@ from flask import Flask, redirect, request, session, render_template, flash, url
 from flask_session import Session
 from email_validator import validate_email, EmailNotValidError
 from datetime import datetime
+import os
+
 app = Flask(__name__)
 app.config["SESSION_PERMANENT"] = False
 app.config["SESSION_TYPE"] = "filesystem"
 Session(app)
+verification_codes = {} 
 
 class User:
-    def __init__(self, name, email, password, address, phone):
+    def __init__(self, name, email, password, address, phone,security_question):
         self.name = name
         self.email = email
         self.password = password
         self.address = address
         self.phone = phone
+        self.security_question = security_question
         self.id = uuid.uuid4()
         self.wishlist = []  
         self.cart = {}      
@@ -34,6 +38,7 @@ class User:
             "password": hashed_password.decode('utf-8'),
             "address": self.address,
             "phone": self.phone,
+            "security_question": self.security_question,
             "wishlist": self.wishlist,  
             "cart": self.cart,          
             "orders": self.orders
@@ -64,13 +69,14 @@ class User:
         except Exception as e:
             raise Exception("Error updating user data:", str(e))
 
-    def __init__(self, name, email, password,address, phone):
+    def __init__(self, name, email, password,address, phone,security_question):
         self.name = name
         self.email = email
         self.password = password
         self.address = address
         self.phone = phone
         self.id = uuid.uuid4()
+        self.security_question = security_question
 
     def hash_password(self):
         return bcrypt.hashpw(self.password.encode('utf-8'), bcrypt.gensalt())
@@ -83,7 +89,8 @@ class User:
             "id": str(self.id),
             "password": hashed_password.decode('utf-8'),
             "address": self.address,
-            "phone": self.phone
+            "phone": self.phone,
+            "security_question": self.security_question
         }
         try:
             with open('usersDB.json', 'r') as file:
@@ -123,6 +130,7 @@ def signup():
         password = request.form.get('password')
         address = request.form.get('address')
         phone = request.form.get('phone')
+        security_question = request.form.get('security_question')
 
         if not email or not password or not name:
             return render_template('signup.html', error='Please enter email, password, and username')
@@ -133,7 +141,17 @@ def signup():
 
         email = email_valid[1]
 
-        new_user = User(name, email, password,address, phone,)
+        userdb_path = '../usersDB.json'
+        if os.path.exists(userdb_path):
+            with open(userdb_path, 'r') as file:
+                userdb = json.load(file)
+        else:
+            userdb = []
+
+        if any(user['email'] == email for user in userdb):
+         return render_template('signup.html', error='Email already exists! Please use a different email.')
+
+        new_user = User(name, email, password,address, phone,security_question)
         hashed_password = new_user.hash_password()
         new_user.format_data(hashed_password)
 
@@ -181,35 +199,69 @@ def login():
         return render_template('login.html')
 
 
-@app.route('/pass_page')
+@app.route('/pass_page', methods=['GET', 'POST'])
 def pass_page():
+    if request.method == 'POST':
+        return redirect('/pass')
     return render_template('forget.html')
 
-@app.route('/pass', methods=['GET', 'POST'])
+@app.route('/pass', methods=['POST'])
 def forgot_password():
+    email = request.form['email']
+    security_answer = request.form['security_question']
+
+    try:
+        with open('usersDB.json', 'r') as file:
+            users = json.load(file)
+
+        for user in users:
+            if user['email'] == email and user.get('security_question') == security_answer:
+                session['reset_email'] = email
+                return redirect('/reset_password')
+
+        flash('Invalid email or security answer. Please try again.', 'error')
+        return redirect('/pass_page')
+
+    except json.JSONDecodeError:
+        flash('Error reading user database. Please contact support.', 'error')
+    except IOError:
+        flash('Error accessing user database. Please try again later.', 'error')
+    except Exception as e:
+        flash(f'An unexpected error occurred: {str(e)}', 'error')
+
+    return redirect('/pass_page')
+
+@app.route('/reset_password', methods=['GET', 'POST'])
+def reset_password():
     if request.method == 'POST':
-        email = request.form['email']
         new_password = request.form['new_password']
+        confirm_password = request.form['confirm_password']
+
+        if new_password != confirm_password:
+            flash('Passwords do not match. Please try again.', 'error')
+            return redirect('/reset_password')
 
         try:
+            email = session.get('reset_email')
+
+            if not email:
+                flash('Session expired. Please try again.', 'error')
+                return redirect('/pass_page')
+
             with open('usersDB.json', 'r') as file:
                 users = json.load(file)
 
-            user_found = False
             for user in users:
                 if user['email'] == email:
                     hashed_password = bcrypt.hashpw(new_password.encode('utf-8'), bcrypt.gensalt())
                     user['password'] = hashed_password.decode('utf-8')
-                    user_found = True
                     break
 
-            if user_found:
-                with open('usersDB.json', 'w') as file:
-                    json.dump(users, file, indent=4)
-                flash('Password has been reset successfully!', 'success')
-                return redirect('/login')
-            else:
-                flash('Email not found. Please try again.', 'error')
+            with open('usersDB.json', 'w') as file:
+                json.dump(users, file, indent=4)
+
+            flash('Password has been reset successfully!', 'success')
+            return redirect('/login')
 
         except json.JSONDecodeError:
             flash('Error reading user database. Please contact support.', 'error')
@@ -217,6 +269,10 @@ def forgot_password():
             flash('Error accessing user database. Please try again later.', 'error')
         except Exception as e:
             flash(f'An unexpected error occurred: {str(e)}', 'error')
+
+        return redirect('/reset_password')
+
+    return render_template('reset_password.html')
 
 @app.route('/profile')
 def profile():
@@ -310,9 +366,9 @@ def add_to_wishlist():
         for user in users_list:
             if user['id'] == user_id:
                 if product_id in user['wishlist']:
-                    user['wishlist'].remove(product_id)  # Remove from wishlist if it already exists
+                    user['wishlist'].remove(product_id)  
                 else:
-                    user['wishlist'].append(product_id)  # Add to wishlist
+                    user['wishlist'].append(product_id)  
                 break
 
         with open("usersDB.json", "w") as file:
@@ -527,7 +583,6 @@ def place_order():
         return jsonify({"success": False, "message": str(e)})
 
 def generate_order_id():
-    # Simple order ID generation (you might want to use a more sophisticated method)
     return f"ORD-{datetime.now().strftime('%Y%m%d%H%M%S')}"
 
 @app.route('/get_orders', methods=['GET'])
