@@ -8,10 +8,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (data.success) {
                     wishlist = data.wishlist;
                 } else {
-                    console.error(data.error);
+                    alert(`Error fetching wishlist: ${data.error}`);
                 }
             })
-            .catch(error => console.error('Error fetching wishlist:', error));
+            .catch(() => {
+                alert('Error fetching wishlist. Please try again later.');
+            });
     }
 
     function toggleWishlist(productId, heartIcon) {
@@ -28,11 +30,13 @@ document.addEventListener('DOMContentLoaded', () => {
                     heartIcon.classList.toggle('active');
                 } else {
                     alert(`Error adding to wishlist: ${data.error}`);
-                    throw new Error(`Error adding to wishlist: ${data.error}`);
+
                 }
             })
-            .catch(error => console.error('Error:', error));
-    }
+            .catch(() => {
+                alert('Error adding to wishlist. Please try again later.');
+            });
+}
 
     function addToCart(product, quantity) {
         fetch('/add_to_cart', {
@@ -50,8 +54,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     alert(`Error adding to cart: ${data.error}`);
                 }
             })
-            .catch(error => console.error('Error:', error));
-    }
+            .catch(() => {
+                alert('Error adding to cart. Please try again later.');
+            });    }
 
     function fetchProducts(category = null) {
         let url = "/get_products";
@@ -117,8 +122,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     });
                 });
             })
-            .catch(error => console.error('Error fetching the products:', error));
-    }
+            .catch(() => {
+                alert('Error fetching the products. Please try again later.');
+            });
+            }
 
     const urlParams = new URLSearchParams(window.location.search);
     const category = urlParams.get('category');
