@@ -8,12 +8,20 @@
         "phone": "0123456789",
         "security_question": "shams",
         "wishlist": [
+            6,
+            10,
             4,
-            2,
-            1,
-            20
+            8,
+            3,
+            12,
+            2
         ],
-        "cart": {},
+        "cart": {
+            "4": 1,
+            "6": 1,
+            "7": 1,
+            "8": 1
+        },
         "orders": [
             {
                 "customerInfo": {
@@ -189,6 +197,80 @@
                 "total": 75,
                 "order_date": "2024-10-21T09:49:47.770936",
                 "order_id": "ORD-20241021094947"
+            },
+            {
+                "customerInfo": {
+                    "name": "shorok",
+                    "address": "cairo",
+                    "city": "ismailia",
+                    "country": "egypt",
+                    "postcode": "4664644",
+                    "phone": "0123456789",
+                    "email": "shorokrashid14@gmail.com",
+                    "order_notes": ""
+                },
+                "cart": [
+                    {
+                        "description": "Bright yellow sunflowers that bring joy and happiness.",
+                        "id": 2,
+                        "inStock": true,
+                        "name": "SunFlower",
+                        "price": 25,
+                        "quantity": 4,
+                        "thumbnail": "../static/images/p2.png",
+                        "type": "Annual"
+                    },
+                    {
+                        "description": "Exotic and elegant flowers perfect for indoor decoration.",
+                        "id": 6,
+                        "inStock": true,
+                        "name": "Orchid",
+                        "price": 60,
+                        "quantity": 1,
+                        "thumbnail": "../static/images/p6.png",
+                        "type": "Perennial"
+                    }
+                ],
+                "total": 160,
+                "order_date": "2024-10-21T20:43:50.871508",
+                "order_id": "ORD-20241021204350"
+            },
+            {
+                "customerInfo": {
+                    "name": "",
+                    "address": "",
+                    "city": "",
+                    "country": "",
+                    "postcode": "",
+                    "phone": "",
+                    "email": "",
+                    "order_notes": ""
+                },
+                "cart": [
+                    {
+                        "description": "Bright yellow sunflowers that bring joy and happiness.",
+                        "id": 2,
+                        "inStock": true,
+                        "name": "SunFlower",
+                        "price": 25,
+                        "quantity": 1,
+                        "thumbnail": "../static/images/p2.png",
+                        "type": "Annual"
+                    },
+                    {
+                        "description": "Elegant tulips available in a variety of colors.",
+                        "id": 4,
+                        "inStock": true,
+                        "name": "Tulip",
+                        "price": 20,
+                        "quantity": 1,
+                        "thumbnail": "../static/images/p4.png",
+                        "type": "Perennial"
+                    }
+                ],
+                "total": 45,
+                "order_date": "2024-10-21T23:08:28.358378",
+                "order_id": "ORD-20241021230828"
             }
         ]
     },
@@ -368,12 +450,272 @@
         "security_question": "Garc\u00eda",
         "wishlist": [
             2,
-            1
+            4
+        ],
+        "cart": {},
+        "orders": [
+            {
+                "customerInfo": {
+                    "name": "shorok",
+                    "address": "cairo",
+                    "city": "",
+                    "country": "",
+                    "postcode": "",
+                    "phone": "",
+                    "email": "",
+                    "order_notes": ""
+                },
+                "cart": [
+                    {
+                        "description": "Large, colorful blooms perfect for garden landscapes.",
+                        "id": 3,
+                        "inStock": true,
+                        "name": "Hydrangea",
+                        "price": 50,
+                        "quantity": 3,
+                        "thumbnail": "../static/images/p3.png",
+                        "type": "Hydrangea"
+                    },
+                    {
+                        "description": "Elegant tulips available in a variety of colors.",
+                        "id": 4,
+                        "inStock": true,
+                        "name": "Tulip",
+                        "price": 20,
+                        "quantity": 4,
+                        "thumbnail": "../static/images/p4.png",
+                        "type": "Perennial"
+                    },
+                    {
+                        "description": "A classic red rose, symbolizing love and romance.",
+                        "id": 1,
+                        "inStock": true,
+                        "name": "Rose",
+                        "price": 30,
+                        "quantity": 1,
+                        "thumbnail": "../static/images/p1.png",
+                        "type": "Annual"
+                    }
+                ],
+                "total": 260,
+                "order_date": "2024-10-21T12:35:29.049787",
+                "order_id": "ORD-20241021123529"
+            }
+        ]
+    },
+    {
+        "name": "shorok mohamed",
+        "email": "1test@beispiel.de",
+        "id": "80442bfe-0b46-4bb1-9788-c3c27b9f7bef",
+        "password": "$2b$12$A.hnw7PWKkiRR5s6yzb2ceF2UppFNtJeY7IaSVScnq1BmuMSHggc.",
+        "address": "cairo",
+        "phone": "0123456789",
+        "security_question": "Garc\u00eda",
+        "wishlist": [],
+        "cart": {},
+        "orders": []
+    },
+    {
+        "name": "shorok mohamed",
+        "email": "12test@beispiel.de",
+        "id": "13f05389-42f5-47a0-b1af-22b4b8a3789e",
+        "password": "$2b$12$7wlWRk8Jx7MVPWtqJoRwaOfcwLH42FaGx8l6/eZa4/hE5BJ1wylOq",
+        "address": "cairo",
+        "phone": "0123456789",
+        "security_question": "Wilhelm",
+        "wishlist": [],
+        "cart": {},
+        "orders": []
+    },
+    {
+        "name": "shorok mohamed",
+        "email": "21test@beispiel.de",
+        "id": "68a56fef-86b5-4810-a265-56870d5a34fe",
+        "password": "$2b$12$BgdSkmLITu8YTcD3Gojv1O41P6PgXQq2JZAKisrb0bVN7kFF2k4n2",
+        "address": "cairo",
+        "phone": "0123456789",
+        "security_question": "Wilhelm",
+        "wishlist": [],
+        "cart": {},
+        "orders": []
+    },
+    {
+        "name": "shorok mohamed",
+        "email": "552test@beispiel.de",
+        "id": "651b1d3f-bb3e-435e-83e9-8c3e4ce9aeac",
+        "password": "$2b$12$F/n3yLNEQwHp0q19QAaqhuA.Q42hW2KmMfeZYXmNt6H6QxaHlmXyC",
+        "address": "cairo",
+        "phone": "0123456789",
+        "security_question": "Wilhelm",
+        "wishlist": [],
+        "cart": {},
+        "orders": []
+    },
+    {
+        "name": "shorok mohamed",
+        "email": "1256test@beispiel.de",
+        "id": "f23918bf-cbeb-4bbe-9615-f29c5a34fcf7",
+        "password": "$2b$12$7nMgCftMJF504vu79R6wb.sSOS1bYB9BsF0.fyP2yIPDQe2EHlbMe",
+        "address": "cairo",
+        "phone": "5553428400",
+        "security_question": "Wilhelm",
+        "wishlist": [
+            4,
+            3,
+            2
+        ],
+        "cart": {},
+        "orders": []
+    },
+    {
+        "name": "shorok mohamed",
+        "email": "shorokatwa22@gmail.com",
+        "id": "1f1d4b20-79ac-4a87-8795-38fdc8e71075",
+        "password": "$2b$12$mCU.0TSsCxEo/sBnBj1fE.6mBQEjpoUdbMBhWQWiS1I.AP.2q3KOm",
+        "address": "cairo",
+        "phone": "0123456789",
+        "security_question": "Wilhelm",
+        "wishlist": [
+            7,
+            8
         ],
         "cart": {
-            "3": 1,
-            "4": 3
+            "6": 4
         },
         "orders": []
+    },
+    {
+        "name": "shorok mohamed",
+        "email": "12sheko147atwa@gmail.com",
+        "id": "33c9ec22-5198-4a4d-a441-760ee4da1815",
+        "password": "$2b$12$KKd.3DtQbztVEpdi7bv5GeFQSayAMWWqYjanbQc1Db2HSX.4CKPSq",
+        "address": "cairo",
+        "phone": "0123456789",
+        "security_question": "Wilhelm",
+        "wishlist": [],
+        "cart": {},
+        "orders": []
+    },
+    {
+        "name": "shorok mohamed",
+        "email": "sharoukmohamed413@yahoo.com",
+        "id": "ed8a4a06-6fe2-4601-9160-7a65a118e1ef",
+        "password": "$2b$12$abn.gczOyojTBQch5DturOKntMx.ex/xhwdoMrxCyzeEDwfxgTP6C",
+        "address": "cairo",
+        "phone": "0123456789",
+        "security_question": "Wilhelm",
+        "wishlist": [],
+        "cart": {},
+        "orders": []
+    },
+    {
+        "name": "shorok mohamed",
+        "email": "test23@beispiel.de",
+        "id": "7578088f-51e2-40a9-ac8b-bb4a587b3d5b",
+        "password": "$2b$12$lGAg/00JdqmiZoHDmKCVLOJanVLHsVS3THkkAezpUPqD/rE1rV2Pu",
+        "address": "cairo",
+        "phone": "0123456789",
+        "security_question": "Wilhelm",
+        "wishlist": [
+            3,
+            2
+        ],
+        "cart": {},
+        "orders": [
+            {
+                "customerInfo": {
+                    "name": "",
+                    "address": "",
+                    "city": "",
+                    "country": "",
+                    "postcode": "",
+                    "phone": "",
+                    "email": "",
+                    "order_notes": ""
+                },
+                "cart": [
+                    {
+                        "description": "Bright yellow sunflowers that bring joy and happiness.",
+                        "id": 2,
+                        "inStock": true,
+                        "name": "SunFlower",
+                        "price": 25,
+                        "quantity": 4,
+                        "thumbnail": "../static/images/p2.png",
+                        "type": "Annual"
+                    }
+                ],
+                "total": 100,
+                "order_date": "2024-10-21T21:30:44.061203",
+                "order_id": "ORD-20241021213044"
+            }
+        ]
+    },
+    {
+        "name": "shorok mohamed",
+        "email": "shorokrashid147@gmail.com",
+        "id": "aff90486-d694-470a-872d-f87e92de595c",
+        "password": "$2b$12$KlP.YSgmtG8smTt7Cjb75ut4qIAZ3eCJNJHl4T4NAnjOgGJ8kWSme",
+        "address": "cairo",
+        "phone": "0123456789",
+        "security_question": "Garc\u00eda",
+        "wishlist": [
+            3,
+            4
+        ],
+        "cart": {},
+        "orders": []
+    },
+    {
+        "name": "shorok mohamed",
+        "email": "shorokrashid1477@gmail.com",
+        "id": "3e5d6a34-603b-4cf9-9ccf-0b40022c8242",
+        "password": "$2b$12$bPWWL3ihkSNc71chr/N/4uzVfGB4zMYmpbou8qukPsSA2tuooM.wu",
+        "address": "cairo",
+        "phone": "0123456789",
+        "security_question": "Flores",
+        "wishlist": [
+            6
+        ],
+        "cart": {},
+        "orders": [
+            {
+                "customerInfo": {
+                    "name": "",
+                    "address": "",
+                    "city": "",
+                    "country": "",
+                    "postcode": "",
+                    "phone": "",
+                    "email": "",
+                    "order_notes": ""
+                },
+                "cart": [
+                    {
+                        "description": "Cheerful white flowers with yellow centers, symbolizing innocence.",
+                        "id": 7,
+                        "inStock": true,
+                        "name": "Daisy",
+                        "price": 15,
+                        "quantity": 1,
+                        "thumbnail": "../static/images/p7.png",
+                        "type": "Annual"
+                    },
+                    {
+                        "description": "Fragrant purple lowers known for their calming properties.",
+                        "id": 5,
+                        "inStock": true,
+                        "name": "Lavender",
+                        "price": 35,
+                        "quantity": 5,
+                        "thumbnail": "../static/images/p5.png",
+                        "type": "Perennial"
+                    }
+                ],
+                "total": 190,
+                "order_date": "2024-10-21T23:30:06.645750",
+                "order_id": "ORD-20241021233006"
+            }
+        ]
     }
 ]
