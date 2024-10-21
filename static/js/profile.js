@@ -15,8 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(response => response.json())
         .then(data => {
             if (data.success) {
-                console.log(data.orders);
-                
                 const ordersList = document.getElementById('orders-list');
                 data.orders.forEach(order => {
                     const orderItem = document.createElement('div');
