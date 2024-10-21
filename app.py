@@ -619,8 +619,12 @@ def get_orders():
 
 @app.route('/')
 def hello_page():
-    return "Hello!"
+    redirect('/base')
 
+@app.route('/blog')
+def blog():
+    return render_template('blog.html')
+      
 @app.route('/logout')
 def logout():
     session.clear()
