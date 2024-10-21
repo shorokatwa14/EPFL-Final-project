@@ -90,7 +90,10 @@ class User:
             "password": hashed_password.decode('utf-8'),
             "address": self.address,
             "phone": self.phone,
-            "security_question": self.security_question
+            "security_question": self.security_question,
+            "wishlist": [], 
+            "cart": {},
+            "orders": []
         }
         try:
             with open('usersDB.json', 'r') as file:
