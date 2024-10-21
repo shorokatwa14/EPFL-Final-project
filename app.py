@@ -6,7 +6,7 @@ from flask_session import Session
 from email_validator import validate_email, EmailNotValidError
 from datetime import datetime
 import os
-
+import re 
 app = Flask(__name__)
 app.config["SESSION_PERMANENT"] = False
 app.config["SESSION_TYPE"] = "filesystem"
@@ -152,7 +152,7 @@ def signup():
             userdb = []
 
         if any(user['email'] == email for user in userdb):
-         return render_template('signup.html', error='Email already exists! Please use a different email.')
+            return jsonify({"error": 'Email already exists! Please use a different email.'}), 400
 
         new_user = User(name, email, password,address, phone,security_question)
         hashed_password = new_user.hash_password()
@@ -166,7 +166,6 @@ def signup():
             "address": new_user.address,
             "phone": new_user.phone
         }), 201
-        return redirect('/home')
     
     return render_template('signup.html')
 
