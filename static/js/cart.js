@@ -1,4 +1,3 @@
-
 async function fetchCartItems() {
     try {
         const response = await fetch('/get_cart_items', {
@@ -8,8 +7,7 @@ async function fetchCartItems() {
 
         if (!response.ok) {
             const errorData = await response.json();
-            console.error('Error fetching cart items:', errorData.error);
-            document.getElementById('cart-items').innerHTML = '<tr><td colspan="6">No items in the cart .</td></tr>';
+            document.getElementById('cart-items').innerHTML = '<tr><td colspan="6">No items in the cart.</td></tr>';
             disableCheckoutButton();
             return;
         }
@@ -17,10 +15,8 @@ async function fetchCartItems() {
         const cartItems = await response.json();
         displayCartItems(cartItems);
     } catch (error) {
-        console.error('Error:', error);
         document.getElementById('cart-items').innerHTML = '<tr><td colspan="6"> Error fetching data.</td></tr>';
         disableCheckoutButton();
-
     }
 }
 
@@ -37,17 +33,13 @@ async function removeItem(itemId) {
 
         if (!response.ok) {
             const errorData = await response.json();
-            console.error('Error removing item:', errorData.error);
             disableCheckoutButton();
             return;
         }
 
-
         fetchCartItems();
     } catch (error) {
-        console.error('Error:', error);
         disableCheckoutButton();
-
     }
 }
 
@@ -64,13 +56,12 @@ async function addQuantity(itemId) {
 
         if (!response.ok) {
             const errorData = await response.json();
-            console.error('Error adding quantity:', errorData.error);
             return;
         }
 
         fetchCartItems();
     } catch (error) {
-        console.error('Error:', error);
+        // Handle error (optional)
     }
 }
 
@@ -87,16 +78,14 @@ async function removeQuantity(itemId) {
 
         if (!response.ok) {
             const errorData = await response.json();
-            console.error('Error removing quantity:', errorData.error);
             return;
         }
 
         fetchCartItems();
     } catch (error) {
-        console.error('Error:', error);
+        // Handle error (optional)
     }
 }
-
 
 function displayCartItems(cartItems) {  
     const cartItemsContainer = document.getElementById('cart-items');
@@ -147,6 +136,7 @@ function updateCartTotals(subtotal) {
     document.getElementById('subtotal').textContent = `$${subtotal.toFixed(2)}`;
     document.getElementById('total').textContent = `$${total.toFixed(2)}`;
 }
+
 function disableCheckoutButton() {
     const checkoutButton = document.getElementById('checkout-button');
     checkoutButton.classList.add('disabled');
