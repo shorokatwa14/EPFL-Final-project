@@ -16,7 +16,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const phoneError = document.getElementById('phone-error');
     const securityQuestionError = document.getElementById('security_question-error');
 
-    // Disable submit button initially
     submitButton.disabled = true;
 
     function checkEmailValidity() {
@@ -24,8 +23,8 @@ document.addEventListener('DOMContentLoaded', function () {
         const emailValid = emailPattern.test(email.value);
 
         if (!email.value) {
-            emailError.style.display = 'none'; // إخفاء الرسالة إذا كان الحقل فارغ
-            return true; // اعتبر البريد صالح، سيظهر الخطأ بعد
+            emailError.style.display = 'none'; 
+            return true; 
         }
 
         if (!emailValid) {
@@ -36,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function () {
         } else {
             email.classList.remove('error');
             emailError.style.display = 'none';
-            return true; // بريد صالح
+            return true; 
         }
     }
 
@@ -47,21 +46,17 @@ document.addEventListener('DOMContentLoaded', function () {
         const isValidPhone = /^[0-9]{10,15}$/.test(phone.value);
         const isValidSecurityQuestion = security_question.value.trim() !== '';
 
-        // Show/hide errors
         fullnameError.style.display = fullname.value ? (isValidFullname ? 'none' : 'block') : 'none';
         passwordError.style.display = password.value ? (isValidPassword ? 'none' : 'block') : 'none';
         addressError.style.display = address.value ? (isValidAddress ? 'none' : 'block') : 'none';
         phoneError.style.display = phone.value ? (isValidPhone ? 'none' : 'block') : 'none';
         securityQuestionError.style.display = security_question.value ? (isValidSecurityQuestion ? 'none' : 'block') : 'none';
 
-        // Validate email separately
         const isEmailValid = checkEmailValidity();
         
-        // Enable or disable submit button based on form validity
         submitButton.disabled = !(isValidFullname && isEmailValid && isValidPassword && isValidAddress && isValidPhone && isValidSecurityQuestion);
     }
 
-    // Attach input event listeners to check for validity on each change
     fullname.addEventListener('input', checkFormValidity);
     email.addEventListener('input', checkFormValidity);
     password.addEventListener('input', checkFormValidity);
@@ -72,7 +67,6 @@ document.addEventListener('DOMContentLoaded', function () {
     form.addEventListener('submit', function (e) {
         e.preventDefault();
 
-        // Check if the submit button is enabled
         if (!submitButton.disabled) {
             const formData = new URLSearchParams({
                 fullname: fullname.value,
@@ -106,8 +100,10 @@ document.addEventListener('DOMContentLoaded', function () {
                     }
                 }
             })
-            .catch(err => console.error(err));
-        }
+            .catch(err => {
+                alert("There was an error processing your request. Please try again later.");
+            });       
+         }
     });
 
     email.addEventListener('input', function () {
