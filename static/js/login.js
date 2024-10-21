@@ -20,17 +20,19 @@ document.querySelector('form').addEventListener('submit', function (e) {
         alert(data.error);
       }
     })
-    .catch(err => console.error(err));
+    .catch(() => {
+      alert('An error occurred while logging in.');  
   });
+});
+
 
   
   function checkUserSession() {
     const user = localStorage.getItem('user');
     if (user) {
       const userData = JSON.parse(user);
-      console.log("Logged in user:", userData);
     } else {
-      console.log("No user logged in.");
+      
     }
   }
 
