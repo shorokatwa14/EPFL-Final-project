@@ -6,7 +6,13 @@
     <title>Shopping Cart</title>
     <link rel="stylesheet" href="../static/css/cart.css">
 </head>
+<style>
+ .button.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+} </style>
 <body>
+    
     <h1>Your Shopping Cart</h1>
     <table>
         <thead>
@@ -20,13 +26,12 @@
             </tr>
         </thead>
         <tbody id="cart-items">
-            <!-- Cart items will be dynamically added here -->
         </tbody>
     </table>
 
     <div class="button-container">
         <a class="button" href="{{ url_for('shop') }}">Continue Shopping</a>
-        <a class="button" href="{{ url_for('checkout') }}">Proceed To Checkout</a>
+        <a class="button" id="checkout-button" href="{{ url_for('checkout') }}">Proceed To Checkout</a>
     </div>
 
     <div class="cart-totals">
@@ -47,7 +52,6 @@
         </table>
     </div>
 
-    <!-- Define a global variable to hold the URL -->
     <script>
         const productsUrl = "{{ url_for('get_products') }}";
     </script>
