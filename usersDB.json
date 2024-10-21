@@ -348,6 +348,32 @@
         "password": "$2b$12$CgrbOCUWkMBxeGZN6CFzO.LkXDGlM8u//PGCGxsGXqw7g13SKMgwK",
         "address": "Erfundene Stra\u00dfe 33",
         "phone": "030303986300",
-        "security_question": "Flores"
+        "security_question": "Flores",
+        "wishlist": [
+            2,
+            1
+        ],
+        "cart": {
+            "4": 1
+        },
+        "orders": []
+    },
+    {
+        "name": "Jo\u00e3o Souza Silva",
+        "email": "teste1245@exemplo.us",
+        "id": "b34ed8af-8cfe-4b9d-8cbd-ae60d927ecd7",
+        "password": "$2b$12$6yUsisGKBGvra.IIwokJXeD0z.luJ7jh0oop9ZIoROFGSgrMdr.Ia",
+        "address": "Rua Inexistente, 2000",
+        "phone": "3121286800",
+        "security_question": "Garc\u00eda",
+        "wishlist": [
+            2,
+            1
+        ],
+        "cart": {
+            "3": 1,
+            "4": 3
+        },
+        "orders": []
     }
 ]
