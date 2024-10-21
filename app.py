@@ -156,7 +156,13 @@ def signup():
         new_user.format_data(hashed_password)
 
         session['user'] = str(new_user.id)
-
+        return jsonify({
+            "id": new_user.id,
+            "name": new_user.name,
+            "email": new_user.email,
+            "address": new_user.address,
+            "phone": new_user.phone
+        }), 201
         return redirect('/home')
     
     return render_template('signup.html')
@@ -599,6 +605,7 @@ def get_orders():
         user = next((user for user in users_list if user['id'] == user_id), None)
 
         if user:
+
             return jsonify({"success": True, "orders": user.get('orders', [])})
         else:
             return jsonify({"success": False, "error": "User not found"}), 404
