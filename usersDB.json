@@ -8,7 +8,10 @@
         "phone": "0123456789",
         "security_question": "shams",
         "wishlist": [
-            3
+            4,
+            2,
+            1,
+            20
         ],
         "cart": {},
         "orders": [
@@ -159,6 +162,33 @@
                 "total": 200,
                 "order_date": "2024-10-20T12:57:31.735279",
                 "order_id": "ORD-20241020125731"
+            },
+            {
+                "customerInfo": {
+                    "name": "",
+                    "address": "",
+                    "city": "",
+                    "country": "",
+                    "postcode": "",
+                    "phone": "",
+                    "email": "",
+                    "order_notes": ""
+                },
+                "cart": [
+                    {
+                        "description": "Bright yellow sunflowers that bring joy and happiness.",
+                        "id": 2,
+                        "inStock": true,
+                        "name": "SunFlower",
+                        "price": 25,
+                        "quantity": 3,
+                        "thumbnail": "../static/images/p2.png",
+                        "type": "Annual"
+                    }
+                ],
+                "total": 75,
+                "order_date": "2024-10-21T09:49:47.770936",
+                "order_id": "ORD-20241021094947"
             }
         ]
     },
@@ -294,21 +324,30 @@
         ]
     },
     {
-        "name": "Gottfried Wilhelm Leibniz",
-        "email": "test@beispiel.de",
-        "id": "6149cf73-e079-47f2-b641-62737c1357a9",
-        "password": "$2b$12$oCS2VO1uypJSYobAwrjrg.zYMQn4irLg4vL.vAvnu2h7w66B0F2OG",
-        "address": "Erfundene Stra\u00dfe 33",
-        "phone": "030303986300",
-        "security_question": "Wilhelm"
+        "name": "Jo\u00e3o Souza Silva",
+        "email": "teste@exemplo.us",
+        "id": "cf3bf616-fe45-4895-9b8b-ccf8a6d936be",
+        "password": "$2b$12$wBwaMCVAcnUp0k1NUIx2wuA7Lmz2T4br21VHsM./Ekvj7Z1cfvQg.",
+        "address": "Rua Inexistente, 2000",
+        "phone": "3121286800",
+        "security_question": "Silva"
     },
     {
         "name": "shorok mohamed",
-        "email": "466440257@ismailia1.moe.edu.eg",
-        "id": "523b8f48-917c-4648-b7b3-0b2ea4e190e6",
-        "password": "$2b$12$wZDbNQze5XSdbgG61Hvvz.1n8YOJzkfb/dLu3q3iew/1B54NJubjW",
+        "email": "shorokatwa1222@gmail.com",
+        "id": "d9c37191-e1f4-41ab-bc99-217e71d5c674",
+        "password": "$2b$12$kXRuQ6e47bykEsuA4De8euHel0V1aIorOdNGrALC8F9xAkAuV8hfm",
         "address": "cairo",
-        "phone": "0123654789",
-        "security_question": "Garc\u00eda"
+        "phone": "5553428400",
+        "security_question": "Flores"
+    },
+    {
+        "name": "Gottfried Wilhelm Leibniz",
+        "email": "test123@beispiel.de",
+        "id": "8bb7fd2e-82a1-4fb5-a15d-a92242a1d05a",
+        "password": "$2b$12$CgrbOCUWkMBxeGZN6CFzO.LkXDGlM8u//PGCGxsGXqw7g13SKMgwK",
+        "address": "Erfundene Stra\u00dfe 33",
+        "phone": "030303986300",
+        "security_question": "Flores"
     }
 ]
