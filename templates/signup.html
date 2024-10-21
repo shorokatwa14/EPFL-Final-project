@@ -3,45 +3,56 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--===============title======================-->
-    <title>Flowers store</title>
-    <!--===============CSS======================-->
+    <title>Flowers Store - Sign Up</title>
     <link rel="stylesheet" href="../static/css/auth.css">
-
-    <!--===============fav icon======================-->
     <link rel="shortcut icon" href="../static/images/fav-icon.png"/>
-    <!--===============fonts======================-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;900&display=swap" rel="stylesheet">
+    <style>
+      .error-message {
+        color: #ff4757;
+        margin-bottom: 10px;
+        display: none;
+      }
+      .error {
+        border-color: #ff4757;
+      }
+      input[type="submit"]:disabled {
+        background-color: #cccccc;
+        cursor: not-allowed;
+      }
+    </style>
   </head>
-<style> .error-message {
-  color: #ff4757;
-  margin-bottom: 10px;
-}
-</style>
   <body>
     <div class="form">
-<div class="form">
-  <div class="sign-up-form">
-    <strong>Sign Up</strong>
-   
-    <form action ='/signup' method="post">
-        <input type="text" name="fullname" placeholder="Full Name" required />
-        <input type="email" name="email" placeholder="Example@gmail.com" required />
-        <input type="password" name="password" placeholder="Password" required />
-        <input type="text" name="address" placeholder="Address" required />
-        <input type="text" name="phone" placeholder="phone number" required />
-        <input type="text" name="security_question" placeholder="What is your mother's maiden name?" required />
-        <input  type="submit" value="Sign Up" />
-    </form>
-    <p class="error-message">{{ error }}</p>
-    <div class="form-btns">
-        <a href="login" class="already-account">Already Have An Account?</a>
-    </div>
-  </div>
-</div>
+      <div class="sign-up-form">
+        <strong>Sign Up</strong>
+        <form id="signup-form" action="/signup" method="post">
+          <input type="text" name="fullname" id="fullname" placeholder="Full Name" required />
+          <span id="fullname-error" class="error-message">Please enter a valid full name.</span>
+
+          <input type="email" name="email" id="email" placeholder="Example@gmail.com" required />
+          <span id="email-error" class="error-message">Please enter a valid email address.</span>
+
+          <input type="password" name="password" id="password" placeholder="Password" required />
+          <span id="password-error" class="error-message">Password must be at least 6 characters.</span>
+
+          <input type="text" name="address" id="address" placeholder="Address" required />
+          <span id="address-error" class="error-message">Please enter your address.</span>
+
+          <input type="text" name="phone" id="phone" placeholder="Phone number" required />
+          <span id="phone-error" class="error-message">Please enter a valid phone number.</span>
+
+          <input type="text" name="security_question" id="security_question" placeholder="What is your mother's maiden name?" required />
+          <span id="security_question-error" class="error-message">Please answer the security question.</span>
+
+          <input type="submit" value="Sign Up" disabled />
+        </form>
+        <p class="error-message">{{ error }}</p>
+        <div class="form-btns">
+          <a href="login" class="already-account">Already Have An Account?</a>
+        </div>
+      </div>
     </div>
     <script src="../static/js/signup.js"></script>
-  </body> 
+  </body>
 </html>
