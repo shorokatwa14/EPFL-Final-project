@@ -9,7 +9,8 @@ async function fetchCartItems() {
         if (!response.ok) {
             const errorData = await response.json();
             console.error('Error fetching cart items:', errorData.error);
-            document.getElementById('cart-items').innerHTML = '<tr><td colspan="6">Log in to add to cart.</td></tr>';
+            document.getElementById('cart-items').innerHTML = '<tr><td colspan="6">No items in the cart .</td></tr>';
+            disableCheckoutButton();
             return;
         }
 
@@ -17,11 +18,12 @@ async function fetchCartItems() {
         displayCartItems(cartItems);
     } catch (error) {
         console.error('Error:', error);
-        document.getElementById('cart-items').innerHTML = '<tr><td colspan="6"> Log in to add to cart.</td></tr>';
+        document.getElementById('cart-items').innerHTML = '<tr><td colspan="6"> Error fetching data.</td></tr>';
+        disableCheckoutButton();
+
     }
 }
 
-// Function to remove an item from the cart
 async function removeItem(itemId) {
     try {
         const response = await fetch('/remove_from_cart', {
@@ -36,17 +38,19 @@ async function removeItem(itemId) {
         if (!response.ok) {
             const errorData = await response.json();
             console.error('Error removing item:', errorData.error);
+            disableCheckoutButton();
             return;
         }
 
-        // Refresh cart items after removal
+
         fetchCartItems();
     } catch (error) {
         console.error('Error:', error);
+        disableCheckoutButton();
+
     }
 }
 
-// Function to add quantity of an item in the cart
 async function addQuantity(itemId) {
     try {
         const response = await fetch('/add_to_cart', {
@@ -64,14 +68,12 @@ async function addQuantity(itemId) {
             return;
         }
 
-        // Refresh cart items after adding quantity
         fetchCartItems();
     } catch (error) {
         console.error('Error:', error);
     }
 }
 
-// Function to remove quantity of an item in the cart
 async function removeQuantity(itemId) {
     try {
         const response = await fetch('/remove_quantity_from_cart', {
@@ -89,7 +91,6 @@ async function removeQuantity(itemId) {
             return;
         }
 
-        // Refresh cart items after removing quantity
         fetchCartItems();
     } catch (error) {
         console.error('Error:', error);
@@ -100,11 +101,13 @@ async function removeQuantity(itemId) {
 function displayCartItems(cartItems) {  
     const cartItemsContainer = document.getElementById('cart-items');
     
-    cartItemsContainer.innerHTML = ''; // Clear existing items
+    cartItemsContainer.innerHTML = ''; 
     if (!cartItems.length) {
         cartItemsContainer.innerHTML = '<tr><td colspan="6">Cart is empty.</td></tr>';
+        disableCheckoutButton();
         return;   
     }
+    enableCheckoutButton();
 
     let subtotal = 0;
 
@@ -143,6 +146,22 @@ function updateCartTotals(subtotal) {
 
     document.getElementById('subtotal').textContent = `$${subtotal.toFixed(2)}`;
     document.getElementById('total').textContent = `$${total.toFixed(2)}`;
+}
+function disableCheckoutButton() {
+    const checkoutButton = document.getElementById('checkout-button');
+    checkoutButton.classList.add('disabled');
+    checkoutButton.addEventListener('click', preventCheckout);
+}
+
+function enableCheckoutButton() {
+    const checkoutButton = document.getElementById('checkout-button');
+    checkoutButton.classList.remove('disabled');
+    checkoutButton.removeEventListener('click', preventCheckout);
+}
+
+function preventCheckout(event) {
+    event.preventDefault();
+    alert('You must add items to your cart before proceeding to checkout.');
 }
 
 window.onload = fetchCartItems;
