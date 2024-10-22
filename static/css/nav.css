@@ -50,7 +50,7 @@
 }
 
 .menu li a:hover {
-  color: var(--main-dark);
+  color: #f74b65
 }
 
 .nav-btns {
@@ -102,7 +102,6 @@
   display: block;
 }
 
-/* Footer Styles */
 .footer {
   background-color: rgb(209, 199, 204);
   color: #000000;
