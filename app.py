@@ -619,7 +619,7 @@ def get_orders():
 
 @app.route('/')
 def hello_page():
-    redirect('/base')
+    return redirect('/base')
 
 @app.route('/blog')
 def blog():
