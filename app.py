@@ -624,7 +624,14 @@ def hello_page():
 @app.route('/blog')
 def blog():
     return render_template('blog.html')
-      
+
+@app.route('/blog_2')
+def blog_2():
+    return render_template('blog2.html')
+
+@app.route('/blog_3')
+def blog_3():
+    return render_template('blog3.html')      
 @app.route('/logout')
 def logout():
     session.clear()
