@@ -55,7 +55,7 @@ a {
     transition: color 0.3s ease;
 }
 a:hover {
-    color: #ad3d8b
+    color: #ebebeb
 }
 .button {
     display: inline-block;
@@ -68,7 +68,7 @@ a:hover {
     transition: background-color 0.3s ease;
 }
 .button:hover {
-    background-color: var(--secondary-color);
+    background-color: #dc8995
 }
 .order-item {
     background-color: #f8f9fa;
