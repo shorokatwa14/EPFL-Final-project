@@ -1,6 +1,43 @@
 let total = 0;
+const checkoutForm = document.getElementById('checkout-form');
+const placeOrderBtn = document.querySelector('.place-order');
+const requiredInputs = checkoutForm.querySelectorAll('input[required]');
 
-// Function to display cart items with product details
+placeOrderBtn.disabled = true;
+placeOrderBtn.style.opacity = '0.5';
+placeOrderBtn.style.cursor = 'not-allowed';
+
+function validateForm() {
+    let isValid = true;
+    let emptyFields = [];
+    
+    requiredInputs.forEach(input => {
+        if (!input.value.trim()) {
+            isValid = false;
+            emptyFields.push(input.getAttribute('placeholder'));
+        }
+    });
+    
+    if (isValid) {
+        placeOrderBtn.disabled = false;
+        placeOrderBtn.style.opacity = '1';
+        placeOrderBtn.style.cursor = 'pointer';
+    } else {
+        placeOrderBtn.disabled = true;
+        placeOrderBtn.style.opacity = '0.5';
+        placeOrderBtn.style.cursor = 'not-allowed';
+    }
+
+    return { isValid, emptyFields };
+}
+
+requiredInputs.forEach(input => {
+    input.addEventListener('input', validateForm);
+    input.addEventListener('focus', () => {
+        input.style.borderColor = '';
+    });
+});
+
 async function displayCart() {
     const cartItemsElement = document.getElementById('cart-items');
     cartItemsElement.innerHTML = '';
@@ -38,8 +75,40 @@ async function displayCart() {
     }
 }
 
-// Function to handle order placement
+async function fetchCartFromBackend() {
+    try {
+        const response = await fetch('/get_cart_items', {
+            method: 'GET',
+            headers: { 'Content-Type': 'application/json' }
+        });
+        return await response.json();
+    } catch (error) {
+        document.getElementById('cart-items').innerHTML = '<div>Error fetching cart items.</div>';
+        return {};
+    }
+}
+
 async function placeOrder() {
+    const validation = validateForm();
+    
+    if (!validation.isValid) {
+        const emptyFieldsList = validation.emptyFields.join(', ');
+        alert(`Please fill in all required fields to continue your order.\n\nMissing information for: ${emptyFieldsList}`);
+        
+        requiredInputs.forEach(input => {
+            if (!input.value.trim()) {
+                input.style.borderColor = 'red';
+                input.addEventListener('input', function removeHighlight() {
+                    if (input.value.trim()) {
+                        input.style.borderColor = '';
+                        input.removeEventListener('input', removeHighlight);
+                    }
+                });
+            }
+        });
+        return;
+    }
+
     const formData = new FormData(document.getElementById('checkout-form'));
     const orderData = {
         customerInfo: Object.fromEntries(formData),
@@ -65,19 +134,6 @@ async function placeOrder() {
     }
 }
 
-async function fetchCartFromBackend() {
-    try {
-        const response = await fetch('/get_cart_items', {
-            method: 'GET',
-            headers: { 'Content-Type': 'application/json' }
-        });
-        return await response.json();
-    } catch (error) {
-        document.getElementById('cart-items').innerHTML = '<div>Error fetching cart items.</div>';
-        return {};
-    }
-}
-
 function showSuccessDialog() {
     document.getElementById('overlay').style.display = 'block';
     document.getElementById('successDialog').style.display = 'block';
@@ -88,5 +144,4 @@ function hideSuccessDialog() {
     document.getElementById('successDialog').style.display = 'none';
 }
 
-// Load cart when page loads
 displayCart();
