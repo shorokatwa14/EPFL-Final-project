@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     let wishlist = [];
-
+    let err =[]
     function fetchWishlist() {
         return fetch('/get_wishlist')
             .then(response => response.json())
@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (data.success) {
                     wishlist = data.wishlist;
                 } else {
-                    alert(`Error fetching wishlist: ${data.error}`);
+                    err =data.error
                 }
             })
             .catch(() => {
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (data.success) {
                     heartIcon.classList.toggle('active');
                 } else {
-                    alert(`Error adding to wishlist: ${data.error}`);
+                    alert(`${data.error}`);
 
                 }
             })
@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (data.success) {
                     alert(`Added ${quantity} ${product.name}(s) to cart!`);
                 } else {
-                    alert(`Error adding to cart: ${data.error}`);
+                    alert(`${data.error}`);
                 }
             })
             .catch(() => {
