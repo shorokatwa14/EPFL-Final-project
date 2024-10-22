@@ -121,7 +121,6 @@ function displayCartItems(cartItems) {
         subtotal += itemSubtotal; 
     });
 
-    // Update totals
     updateCartTotals(subtotal);
 }
 
