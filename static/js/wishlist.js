@@ -16,17 +16,17 @@ document.addEventListener('DOMContentLoaded', () => {
                         .then(products => {
                             renderWishlist(products);
                         })
-                        .catch(error => console.error('Error fetching wishlist products:', error));
+                        .catch(() => alert('Error fetching wishlist products.'));
                 } else {
-                    console.error(data.error);
+                    alert(data.error);
                 }
             })
-            .catch(error => console.error('Error fetching wishlist:', error));
+            .catch(() => alert('Error fetching wishlist.'));
     }
 
     function renderWishlist(products) {
         const productList = document.getElementById('products');
-        productList.innerHTML = ''; // Clear the list before rendering
+        productList.innerHTML = ''; 
 
         products.forEach(product => {
             const listItem = document.createElement('li');
@@ -93,12 +93,12 @@ document.addEventListener('DOMContentLoaded', () => {
             .then(response => response.json())
             .then(data => {
                 if (data.success) {
-                    fetchWishlistProducts(); // Refresh the wishlist
+                    fetchWishlistProducts(); 
                 } else {
-                    console.error(data.error);
+                    alert(data.error);
                 }
             })
-            .catch(error => console.error('Error removing from wishlist:', error));
+            .catch(() => alert('Error removing from wishlist.'));
     }
 
     function addToCart(product, quantity) {
@@ -117,7 +117,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     alert(`Error adding to cart: ${data.error}`);
                 }
             })
-            .catch(error => console.error('Error:', error));
+            .catch(() => alert('Error adding to cart.'));
     }
 
     fetchWishlistProducts();
