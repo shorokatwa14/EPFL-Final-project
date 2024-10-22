@@ -61,7 +61,6 @@ async function addQuantity(itemId) {
 
         fetchCartItems();
     } catch (error) {
-        // Handle error (optional)
     }
 }
 
@@ -83,7 +82,6 @@ async function removeQuantity(itemId) {
 
         fetchCartItems();
     } catch (error) {
-        // Handle error (optional)
     }
 }
 
@@ -100,9 +98,8 @@ function displayCartItems(cartItems) {
 
     let subtotal = 0;
 
-    // Iterate through each item and create table rows
     cartItems?.forEach(item => {        
-        const quantity = item.quantity || 1; // Assuming quantity is part of the product data
+        const quantity = item.quantity || 1; 
         const itemSubtotal = item.price * quantity;
 
         // Create a new table row
@@ -121,16 +118,15 @@ function displayCartItems(cartItems) {
         `;
         cartItemsContainer.appendChild(row);
 
-        subtotal += itemSubtotal; // Add to subtotal
+        subtotal += itemSubtotal; 
     });
 
     // Update totals
     updateCartTotals(subtotal);
 }
 
-// Function to update cart totals
 function updateCartTotals(subtotal) {
-    const shipping = 0; // Assuming free shipping
+    const shipping = 0; 
     const total = subtotal + shipping;
 
     document.getElementById('subtotal').textContent = `$${subtotal.toFixed(2)}`;
