@@ -8,18 +8,10 @@
         "phone": "0123456789",
         "security_question": "shams",
         "wishlist": [
-            6,
-            10,
-            4,
-            8,
-            3,
             12,
             2
         ],
         "cart": {
-            "4": 1,
-            "6": 1,
-            "7": 1,
             "8": 1
         },
         "orders": [
@@ -715,6 +707,222 @@
                 "total": 190,
                 "order_date": "2024-10-21T23:30:06.645750",
                 "order_id": "ORD-20241021233006"
+            }
+        ]
+    },
+    {
+        "name": "shams atwa",
+        "email": "shams14@gmail.com",
+        "id": "d3c4f607-f198-42cc-8c5b-8f843d165922",
+        "password": "$2b$12$cEsmWh6/Pas7RE1dNh8D2uoxOS.1Rc3eFQh6kfXs69RR6kt9MOHsG",
+        "address": "cairo",
+        "phone": "0123654789",
+        "security_question": "Silva",
+        "wishlist": [
+            20,
+            16,
+            10,
+            2
+        ],
+        "cart": {
+            "3": 1
+        },
+        "orders": [
+            {
+                "customerInfo": {
+                    "name": "shorok",
+                    "address": "cairo",
+                    "city": "ismailia",
+                    "country": "egypt",
+                    "postcode": "23655",
+                    "phone": "0123456789",
+                    "email": "shamsatwa@gmail.com",
+                    "order_notes": ""
+                },
+                "cart": [
+                    {
+                        "description": "Elegant flowers with glossy evergreen leaves.",
+                        "id": 23,
+                        "inStock": true,
+                        "name": "Camellia",
+                        "price": 58,
+                        "quantity": 2,
+                        "thumbnail": "../static/images/p23.jpg",
+                        "type": "Perennial"
+                    }
+                ],
+                "total": 116,
+                "order_date": "2024-10-22T09:33:35.811578",
+                "order_id": "ORD-20241022093335"
+            },
+            {
+                "customerInfo": {
+                    "name": "shorok",
+                    "address": "cairo",
+                    "city": "ismailia",
+                    "country": "egypt",
+                    "postcode": "556664",
+                    "phone": "0123456789",
+                    "email": "test@beispiel.de",
+                    "order_notes": ""
+                },
+                "cart": [
+                    {
+                        "description": "Large, colorful blooms perfect for garden landscapes.",
+                        "id": 3,
+                        "inStock": true,
+                        "name": "Hydrangea",
+                        "price": 50,
+                        "quantity": 1,
+                        "thumbnail": "../static/images/p3.png",
+                        "type": "Hydrangea"
+                    }
+                ],
+                "total": 50,
+                "order_date": "2024-10-22T10:49:06.557607",
+                "order_id": "ORD-20241022104906"
+            }
+        ]
+    },
+    {
+        "name": "shorok mohamed",
+        "email": "shorok22@gmail.com",
+        "id": "4e30d515-db9d-4451-b740-c5b15f85623a",
+        "password": "$2b$12$ywK6JvYtWqSnM2rUxTyVROq1Z.crLNaoKaygMpqKWR3eMs0RTHgyK",
+        "address": "cairo",
+        "phone": "0123654789",
+        "security_question": "Flores",
+        "wishlist": [
+            17,
+            23
+        ],
+        "cart": {},
+        "orders": [
+            {
+                "customerInfo": {
+                    "name": "shorok",
+                    "address": "cairo",
+                    "city": "maadi",
+                    "country": "egypt",
+                    "postcode": "4242424",
+                    "phone": "0123456789",
+                    "email": "shorok22@gmail.com",
+                    "order_notes": ""
+                },
+                "cart": [
+                    {
+                        "description": "Bright yellow sunflowers that bring joy and happiness.",
+                        "id": 2,
+                        "inStock": true,
+                        "name": "SunFlower",
+                        "price": 25,
+                        "quantity": 1,
+                        "thumbnail": "../static/images/p2.png",
+                        "type": "Annual"
+                    },
+                    {
+                        "description": "Colorful flowers ideal for hanging baskets and shaded areas.",
+                        "id": 19,
+                        "inStock": true,
+                        "name": "Begonia",
+                        "price": 23,
+                        "quantity": 2,
+                        "thumbnail": "../static/images/p19.jpg",
+                        "type": "Annual"
+                    },
+                    {
+                        "description": "Vibrant autumn flowers in a wide range of colors and shapes.",
+                        "id": 9,
+                        "inStock": true,
+                        "name": "Chrysanthemum",
+                        "price": 28,
+                        "quantity": 1,
+                        "thumbnail": "../static/images/p9.png",
+                        "type": "Annual"
+                    }
+                ],
+                "total": 99,
+                "order_date": "2024-10-22T15:22:13.632540",
+                "order_id": "ORD-20241022152213"
+            },
+            {
+                "customerInfo": {
+                    "name": "shorok",
+                    "address": "cairo",
+                    "city": "ismailia",
+                    "country": "egypt",
+                    "postcode": "57575",
+                    "phone": "6019521325",
+                    "email": "sheko147atwa@gmail.com",
+                    "order_notes": ""
+                },
+                "cart": [
+                    {
+                        "description": "Colorful flowers ideal for hanging baskets and shaded areas.",
+                        "id": 19,
+                        "inStock": true,
+                        "name": "Begonia",
+                        "price": 23,
+                        "quantity": 2,
+                        "thumbnail": "../static/images/p19.jpg",
+                        "type": "Annual"
+                    }
+                ],
+                "total": 46,
+                "order_date": "2024-10-22T17:10:22.998583",
+                "order_id": "ORD-20241022171022"
+            }
+        ]
+    },
+    {
+        "name": "shorok mohamed",
+        "email": "sho@gmail.com",
+        "id": "4c741d7e-d118-4ecf-b569-d224982a02d7",
+        "password": "$2b$12$yRledpcXowgt6xei0H99OeHnCYtGCzwKLKSeyph41CGMoUtFUTiSO",
+        "address": "cairo",
+        "phone": "0123654789",
+        "security_question": "Garc\u00eda",
+        "wishlist": [],
+        "cart": {},
+        "orders": []
+    },
+    {
+        "name": "shorok mohamed",
+        "email": "shorokatwa88@gmail.com",
+        "id": "3ceb4569-64f6-4800-8a57-9995091cdda3",
+        "password": "$2b$12$ExpIzKBr/g9IrHQOdcrLuu9Mrgg.D/GcOFlPOKUBUbPhlj4ETzlL6",
+        "address": "cairo",
+        "phone": "0123456789",
+        "security_question": "Silva",
+        "wishlist": [],
+        "cart": {},
+        "orders": [
+            {
+                "customerInfo": {
+                    "name": "shorok",
+                    "address": "cairo",
+                    "city": "ismailia",
+                    "country": "egypt",
+                    "postcode": "5225",
+                    "phone": "3121286800",
+                    "email": "shorokatwa@gmail.com",
+                    "order_notes": ""
+                },
+                "cart": [
+                    {
+                        "description": "Large, colorful blooms perfect for garden landscapes.",
+                        "id": 3,
+                        "inStock": true,
+                        "name": "Hydrangea",
+                        "price": 50,
+                        "quantity": 1,
+                        "thumbnail": "../static/images/p3.png",
+                        "type": "Hydrangea"
+                    }
+                ],
+                "total": 50,
+                "order_date": "2024-10-22T23:44:02.701568",
+                "order_id": "ORD-20241022234402"
             }
         ]
     }
