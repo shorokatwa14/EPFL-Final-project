@@ -68,74 +68,75 @@
         <h1>My Wishlist</h1>
         <ul id="products"></ul>
     </div>
-<footer class="footer container">
-            <div class="footer__container grid">
-                <div class="footer__content footer__contact"> <!-- Ensure "footer__contact" class is added -->
-                    <a href="index.html" class="footer__logo">
-                        <img src="../static/images/log2.png" alt="" class="footer__logo-img" />
-                    </a>
-                    <h4 class="footer__subtitle">Contact</h4>
-                    <p class="footer__description">
-                        <span>Address:</span> 13 Tlemcen Road, Street 32, Beb-Wahren
-                    </p>
-                    <p class="footer__description">
-                        <span>Phone:</span> +01 2222 365 /(+91) 01 2345 6789
-                    </p>
-                    <p class="footer__description">
-                        <span>Hours:</span> 10:00 - 18:00, Mon - Sat
-                    </p>
-                    <div class="footer__social">
-                        <h4 class="footer__subtitle">Follow Me</h4>
-                        <div class="footer__links flex">
-                            <a href="#">
-                                <img src="../static/images/icon-facebook.svg" alt="" class="footer__social-icon" />
-                            </a>
-                            <a href="#">
-                                <img src="../static/images/icon-twitter.svg" alt="" class="footer__social-icon" />
-                            </a>
-                            <a href="#">
-                                <img src="../static/images/icon-instagram.svg" alt="" class="footer__social-icon" />
-                            </a>
-                            <a href="#">
-                                <img src="../static/images/icon-pinterest.svg" alt="" class="footer__social-icon" />
-                            </a>
-                            <a href="#">
-                                <img src="../static/images/icon-youtube.svg" alt="" class="footer__social-icon" />
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="footer__content">
-                    <h3 class="footer__title">Address</h3>
-                    <ul class="footer__links">
-                        <li><a href="#" class="footer__link">About Us</a></li>
-                        <li><a href="#" class="footer__link">Delivery Information</a></li>
-                        <li><a href="#" class="footer__link">Privacy Policy</a></li>
-                        <li><a href="#" class="footer__link">Terms & Conditions</a></li>
-                        <li><a href="#" class="footer__link">Contact Us</a></li>
-                        <li><a href="#" class="footer__link">Support Center</a></li>
-                    </ul>
-                </div>
-                <div class="footer__content">
-                    <h3 class="footer__title">My Account</h3>
-                    <ul class="footer__links">
-                        <li><a href="#" class="footer__link">Sign In</a></li>
-                        <li><a href="#" class="footer__link">View Cart</a></li>
-                        <li><a href="#" class="footer__link">My Wishlist</a></li>
-                        <li><a href="#" class="footer__link">Help</a></li>
-                        <li><a href="#" class="footer__link">Shop</a></li>
-                    </ul>
-                </div>
-                <div class="footer__content">
-                    <h3 class="footer__title">Secured Payed Gateways</h3>
-                    <img src="../static/images/payment-method.png" alt="" class="payment__img" />
-                </div>
+    <footer class="footer container">
+      <div class="footer__container grid">
+        <div class="footer__content footer__contact">
+          <a href="index.html" class="footer__logo">
+            <img src="../static/images/log2.png" alt="" class="footer__logo-img" />
+          </a>
+          <h4 class="footer__subtitle">Contact</h4>
+          <p class="footer__description">
+            <span>Address:</span> 13 Tlemcen Road, Street 32, Beb-Wahren
+          </p>
+          <p class="footer__description">
+            <span>Phone:</span> +01 2222 365 /(+91) 01 2345 6789
+          </p>
+          <p class="footer__description">
+            <span>Hours:</span> 10:00 - 18:00, Mon - Sat
+          </p>
+          <div class="footer__social">
+            <h4 class="footer__subtitle">Follow Me</h4>
+            <div class="footer__links flex">
+              <a href="shorok_m_atwa">
+                <img src="../static/images/icon-facebook.svg" alt="" class="footer__social-icon" />
+              </a>
+              <a href="s147_">
+                <img src="../static/images/icon-twitter.svg" alt="" class="footer__social-icon" />
+              </a>
+              <a href="shorokatwa14">
+                <img src="../static/images/icon-instagram.svg" alt="" class="footer__social-icon" />
+              </a>
+              <a href="shorokatwa">
+                <img src="../static/images/icon-pinterest.svg" alt="" class="footer__social-icon" />
+              </a>
+              <a href="shorokatwa">
+                <img src="../static/images/icon-youtube.svg" alt="" class="footer__social-icon" />
+              </a>
             </div>
-            <div class="footer__bottom">
-                <p class="copyright">&copy; 2024 Flowers. All right reserved</p>
-                <span class="designer">Designer by Shorok Mohamed</span>
-            </div>
-        </footer>
+          </div>
+        </div>
+        <div class="footer__content">
+          <h3 class="footer__title">Address</h3>
+          <ul class="footer__links">
+            <li><a href="base#about-us" class="footer__link">About Us</a></li>
+            <li><a href="base#" class="footer__link">Delivery Information</a></li>
+            <li><a href="base#" class="footer__link">Privacy Policy</a></li>
+            <li><a href="base#" class="footer__link">Terms & Conditions</a></li>
+            <li><a href="base#delivery" class="footer__link">Contact Us</a></li>
+            <li><a href="base#delivery" class="footer__link">Support Center</a></li>
+          </ul>
+        </div>
+        <div class="footer__content">
+          <h3 class="footer__title">My Account</h3>
+          <ul class="footer__links">
+            <li><a href="{{ url_for('login') }}" class="footer__link">Log In</a></li>
+            <li><a href="{{ url_for('signup') }}" class="footer__link">Sign Up</a></li>
+            <li><a href="{{ url_for('cart') }}" class="footer__link">View Cart</a></li>
+            <li><a href="{{ url_for('wishlist') }}" class="footer__link">My Wishlist</a></li>
+            <li><a href="base#delivery" class="footer__link">Help</a></li>
+            <li><a href="{{ url_for('shop') }}" class="footer__link">Shop</a></li>
+          </ul>
+        </div>
+        <div class="footer__content">
+          <h3 class="footer__title">Secured Payed Gateways</h3>
+          <img src="../static/images/payment-method.png" alt="" class="payment__img" />
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="copyright">&copy; 2024 Flowers. All right reserved</p>
+        <span class="designer">Designer by Shorok Mohamed</span>
+      </div>
+    </footer>
     <script src="../static/js/wishlist.js"></script>
 </body>
 

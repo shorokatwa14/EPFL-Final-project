@@ -117,19 +117,19 @@
         <div class="footer__social">
           <h4 class="footer__subtitle">Follow Me</h4>
           <div class="footer__links flex">
-            <a href="#">
+            <a href="shorok_m_atwa">
               <img src="../static/images/icon-facebook.svg" alt="" class="footer__social-icon" />
             </a>
-            <a href="#">
+            <a href="s147_">
               <img src="../static/images/icon-twitter.svg" alt="" class="footer__social-icon" />
             </a>
-            <a href="#">
+            <a href="shorokatwa14">
               <img src="../static/images/icon-instagram.svg" alt="" class="footer__social-icon" />
             </a>
-            <a href="#">
+            <a href="shorokatwa">
               <img src="../static/images/icon-pinterest.svg" alt="" class="footer__social-icon" />
             </a>
-            <a href="#">
+            <a href="shorokatwa">
               <img src="../static/images/icon-youtube.svg" alt="" class="footer__social-icon" />
             </a>
           </div>
@@ -138,22 +138,23 @@
       <div class="footer__content">
         <h3 class="footer__title">Address</h3>
         <ul class="footer__links">
-          <li><a href="#" class="footer__link">About Us</a></li>
-          <li><a href="#" class="footer__link">Delivery Information</a></li>
-          <li><a href="#" class="footer__link">Privacy Policy</a></li>
-          <li><a href="#" class="footer__link">Terms & Conditions</a></li>
-          <li><a href="#" class="footer__link">Contact Us</a></li>
-          <li><a href="#" class="footer__link">Support Center</a></li>
+          <li><a href="base#about-us" class="footer__link">About Us</a></li>
+          <li><a href="base#" class="footer__link">Delivery Information</a></li>
+          <li><a href="base#" class="footer__link">Privacy Policy</a></li>
+          <li><a href="base#" class="footer__link">Terms & Conditions</a></li>
+          <li><a href="base#delivery" class="footer__link">Contact Us</a></li>
+          <li><a href="base#delivery" class="footer__link">Support Center</a></li>
         </ul>
       </div>
       <div class="footer__content">
         <h3 class="footer__title">My Account</h3>
         <ul class="footer__links">
-          <li><a href="#" class="footer__link">Sign In</a></li>
-          <li><a href="#" class="footer__link">View Cart</a></li>
-          <li><a href="#" class="footer__link">My Wishlist</a></li>
-          <li><a href="#" class="footer__link">Help</a></li>
-          <li><a href="#" class="footer__link">Shop</a></li>
+          <li><a href="{{ url_for('login') }}" class="footer__link">Log In</a></li>
+          <li><a href="{{ url_for('signup') }}" class="footer__link">Sign Up</a></li>
+          <li><a href="{{ url_for('cart') }}" class="footer__link">View Cart</a></li>
+          <li><a href="{{ url_for('wishlist') }}" class="footer__link">My Wishlist</a></li>
+          <li><a href="base#delivery" class="footer__link">Help</a></li>
+          <li><a href="{{ url_for('shop') }}" class="footer__link">Shop</a></li>
         </ul>
       </div>
       <div class="footer__content">
@@ -166,7 +167,6 @@
       <span class="designer">Designer by Shorok Mohamed</span>
     </div>
   </footer>
-
   <script src="../static/js/nav.js"></script>
   <script src="../static/js/logout.js"></script>
 </body>
