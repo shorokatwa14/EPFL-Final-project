@@ -1,0 +1,1084 @@
+[
+    {
+        "name": "shams",
+        "email": "shorokrashid14@gmail.com",
+        "id": "4a28c408-7748-4cbc-89a5-6c6d5e11e3be",
+        "password": "$2b$12$AtyXQECzt6kV07OZe6NqOuGD9AssY2NiLQDRNROdZPL8lpU2F4F7e",
+        "address": "cairo",
+        "phone": "0123456789",
+        "security_question": "shams",
+        "wishlist": [
+            12,
+            2,
+            3
+        ],
+        "cart": {},
+        "orders": [
+            {
+                "customerInfo": {
+                    "name": "shorok atwa",
+                    "address": "cairo",
+                    "city": "maadi",
+                    "country": "egypt",
+                    "postcode": "123456",
+                    "phone": "0123456789",
+                    "email": "shorokrashid14@gmail.com",
+                    "order_notes": ""
+                },
+                "cart": [
+                    {
+                        "description": "Bright yellow sunflowers that bring joy and happiness.",
+                        "id": 2,
+                        "inStock": true,
+                        "name": "SunFlower",
+                        "price": 25,
+                        "quantity": 2,
+                        "thumbnail": "../static/images/p2.png",
+                        "type": "Annual"
+                    },
+                    {
+                        "description": "Large, colorful blooms perfect for garden landscapes.",
+                        "id": 3,
+                        "inStock": true,
+                        "name": "Hydrangea",
+                        "price": 50,
+                        "quantity": 2,
+                        "thumbnail": "../static/images/p3.png",
+                        "type": "Biennial"
+                    },
+                    {
+                        "description": "Elegant tulips available in a variety of colors.",
+                        "id": 4,
+                        "inStock": true,
+                        "name": "Tulip",
+                        "price": 20,
+                        "quantity": 2,
+                        "thumbnail": "../static/images/p4.png",
+                        "type": "Perennial"
+                    }
+                ],
+                "total": 190,
+                "order_date": "2024-10-20T10:36:00.031131",
+                "order_id": "ORD-20241020103600"
+            },
+            {
+                "customerInfo": {
+                    "name": "",
+                    "address": "",
+                    "city": "",
+                    "country": "",
+                    "postcode": "",
+                    "phone": "",
+                    "email": "",
+                    "order_notes": ""
+                },
+                "cart": [
+                    {
+                        "description": "Cheerful white flowers with yellow centers, symbolizing innocence.",
+                        "id": 7,
+                        "inStock": true,
+                        "name": "Daisy",
+                        "price": 15,
+                        "quantity": 1,
+                        "thumbnail": "../static/images/p7.png",
+                        "type": "Annual"
+                    },
+                    {
+                        "description": "Elegant and fragrant flowers available in various colors.",
+                        "id": 8,
+                        "inStock": true,
+                        "name": "Lily",
+                        "price": 40,
+                        "quantity": 1,
+                        "thumbnail": "../static/images/p8.png",
+                        "type": "Perennial"
+                    },
+                    {
+                        "description": "Vibrant autumn flowers in a wide range of colors and shapes.",
+                        "id": 9,
+                        "inStock": true,
+                        "name": "Chrysanthemum",
+                        "price": 28,
+                        "quantity": 1,
+                        "thumbnail": "../static/images/p9.png",
+                        "type": "Annual"
+                    }
+                ],
+                "total": 83,
+                "order_date": "2024-10-20T10:40:15.882645",
+                "order_id": "ORD-20241020104015"
+            },
+            {
+                "customerInfo": {
+                    "name": "",
+                    "address": "",
+                    "city": "",
+                    "country": "",
+                    "postcode": "",
+                    "phone": "",
+                    "email": "",
+                    "order_notes": ""
+                },
+                "cart": [
+                    {
+                        "description": "Elegant tulips available in a variety of colors.",
+                        "id": 4,
+                        "inStock": true,
+                        "name": "Tulip",
+                        "price": 20,
+                        "quantity": 1,
+                        "thumbnail": "../static/images/p4.png",
+                        "type": "Perennial"
+                    }
+                ],
+                "total": 20,
+                "order_date": "2024-10-20T11:24:12.857906",
+                "order_id": "ORD-20241020112412"
+            },
+            {
+                "customerInfo": {
+                    "name": "",
+                    "address": "",
+                    "city": "",
+                    "country": "",
+                    "postcode": "",
+                    "phone": "",
+                    "email": "",
+                    "order_notes": ""
+                },
+                "cart": [
+                    {
+                        "description": "Large, colorful blooms perfect for garden landscapes.",
+                        "id": 3,
+                        "inStock": true,
+                        "name": "Hydrangea",
+                        "price": 50,
+                        "quantity": 4,
+                        "thumbnail": "../static/images/p3.png",
+                        "type": "Biennial"
+                    }
+                ],
+                "total": 200,
+                "order_date": "2024-10-20T12:57:31.735279",
+                "order_id": "ORD-20241020125731"
+            },
+            {
+                "customerInfo": {
+                    "name": "",
+                    "address": "",
+                    "city": "",
+                    "country": "",
+                    "postcode": "",
+                    "phone": "",
+                    "email": "",
+                    "order_notes": ""
+                },
+                "cart": [
+                    {
+                        "description": "Bright yellow sunflowers that bring joy and happiness.",
+                        "id": 2,
+                        "inStock": true,
+                        "name": "SunFlower",
+                        "price": 25,
+                        "quantity": 3,
+                        "thumbnail": "../static/images/p2.png",
+                        "type": "Annual"
+                    }
+                ],
+                "total": 75,
+                "order_date": "2024-10-21T09:49:47.770936",
+                "order_id": "ORD-20241021094947"
+            },
+            {
+                "customerInfo": {
+                    "name": "shorok",
+                    "address": "cairo",
+                    "city": "ismailia",
+                    "country": "egypt",
+                    "postcode": "4664644",
+                    "phone": "0123456789",
+                    "email": "shorokrashid14@gmail.com",
+                    "order_notes": ""
+                },
+                "cart": [
+                    {
+                        "description": "Bright yellow sunflowers that bring joy and happiness.",
+                        "id": 2,
+                        "inStock": true,
+                        "name": "SunFlower",
+                        "price": 25,
+                        "quantity": 4,
+                        "thumbnail": "../static/images/p2.png",
+                        "type": "Annual"
+                    },
+                    {
+                        "description": "Exotic and elegant flowers perfect for indoor decoration.",
+                        "id": 6,
+                        "inStock": true,
+                        "name": "Orchid",
+                        "price": 60,
+                        "quantity": 1,
+                        "thumbnail": "../static/images/p6.png",
+                        "type": "Perennial"
+                    }
+                ],
+                "total": 160,
+                "order_date": "2024-10-21T20:43:50.871508",
+                "order_id": "ORD-20241021204350"
+            },
+            {
+                "customerInfo": {
+                    "name": "",
+                    "address": "",
+                    "city": "",
+                    "country": "",
+                    "postcode": "",
+                    "phone": "",
+                    "email": "",
+                    "order_notes": ""
+                },
+                "cart": [
+                    {
+                        "description": "Bright yellow sunflowers that bring joy and happiness.",
+                        "id": 2,
+                        "inStock": true,
+                        "name": "SunFlower",
+                        "price": 25,
+                        "quantity": 1,
+                        "thumbnail": "../static/images/p2.png",
+                        "type": "Annual"
+                    },
+                    {
+                        "description": "Elegant tulips available in a variety of colors.",
+                        "id": 4,
+                        "inStock": true,
+                        "name": "Tulip",
+                        "price": 20,
+                        "quantity": 1,
+                        "thumbnail": "../static/images/p4.png",
+                        "type": "Perennial"
+                    }
+                ],
+                "total": 45,
+                "order_date": "2024-10-21T23:08:28.358378",
+                "order_id": "ORD-20241021230828"
+            }
+        ]
+    },
+    {
+        "name": "Salma Ahmed Mohammed",
+        "email": "salmaelhamshary1@gmail.com",
+        "id": "5bfce853-daa1-47e7-9d18-decc46abb402",
+        "password": "$2b$12$Y8.IpQ3WyQYzJmC5SYKgjePfmLqoesZW/bT8NDHNUmtwPqZy4.NHO",
+        "address": "Ismailia",
+        "phone": "01201322714",
+        "security_question": "salma",
+        "wishlist": [
+            1,
+            8,
+            5,
+            12,
+            2,
+            3
+        ],
+        "cart": {},
+        "orders": [
+            {
+                "customerInfo": {
+                    "name": "Salma Ahmed Mohammed",
+                    "address": "\u0627\u0644\u062f\u0627\u064a\u0631\u064a \u0628\u062c\u0648\u0627\u0631 \u0628\u0646\u0632\u064a\u0646\u0629 \u062a\u0648\u062a\u0627\u0644",
+                    "city": "Ismailia",
+                    "country": "Egypt",
+                    "postcode": "",
+                    "phone": "01201322714",
+                    "email": "salmaelhamshary1@gmail.com",
+                    "order_notes": ""
+                },
+                "cart": [
+                    {
+                        "description": "Bright yellow sunflowers that bring joy and happiness.",
+                        "id": 2,
+                        "inStock": true,
+                        "name": "SunFlower",
+                        "price": 25,
+                        "quantity": 2,
+                        "thumbnail": "../static/images/p2.png",
+                        "type": "Annual"
+                    },
+                    {
+                        "description": "Large, colorful blooms perfect for garden landscapes.",
+                        "id": 3,
+                        "inStock": true,
+                        "name": "Hydrangea",
+                        "price": 50,
+                        "quantity": 3,
+                        "thumbnail": "../static/images/p3.png",
+                        "type": "Biennial"
+                    },
+                    {
+                        "description": "Cheerful white flowers with yellow centers, symbolizing innocence.",
+                        "id": 7,
+                        "inStock": true,
+                        "name": "Daisy",
+                        "price": 15,
+                        "quantity": 3,
+                        "thumbnail": "../static/images/p7.png",
+                        "type": "Annual"
+                    }
+                ],
+                "total": 245,
+                "order_date": "2024-10-19T16:52:37.493081",
+                "order_id": "ORD-20241019165237"
+            },
+            {
+                "customerInfo": {
+                    "name": "Ahmed Mohammed",
+                    "address": "Ismailia",
+                    "city": "Ismailia",
+                    "country": "Egypt",
+                    "postcode": "41511",
+                    "phone": "01201322714",
+                    "email": "salmaelhamshary1@gmail.com",
+                    "order_notes": ""
+                },
+                "cart": [
+                    {
+                        "description": "A classic red rose, symbolizing love and romance.",
+                        "id": 1,
+                        "inStock": true,
+                        "name": "Rose",
+                        "price": 30,
+                        "quantity": 3,
+                        "thumbnail": "../static/images/p1.png",
+                        "type": "Annual"
+                    }
+                ],
+                "total": 90,
+                "order_date": "2024-10-19T17:50:48.334238",
+                "order_id": "ORD-20241019175048"
+            },
+            {
+                "customerInfo": {
+                    "name": "Salma Ahmed Mohammed",
+                    "address": "\u0627\u0644\u062f\u0627\u064a\u0631\u064a \u0628\u062c\u0648\u0627\u0631 \u0628\u0646\u0632\u064a\u0646\u0629 \u062a\u0648\u062a\u0627\u0644",
+                    "city": "Ismailia",
+                    "country": "Egypt",
+                    "postcode": "41511",
+                    "phone": "01201322714",
+                    "email": "salmaelhamshary1@gmail.com",
+                    "order_notes": ""
+                },
+                "cart": [
+                    {
+                        "description": "Bright yellow sunflowers that bring joy and happiness.",
+                        "id": 2,
+                        "inStock": true,
+                        "name": "SunFlower",
+                        "price": 25,
+                        "quantity": 2,
+                        "thumbnail": "../static/images/p2.png",
+                        "type": "Annual"
+                    },
+                    {
+                        "description": "Large, colorful blooms perfect for garden landscapes.",
+                        "id": 3,
+                        "inStock": true,
+                        "name": "Hydrangea",
+                        "price": 50,
+                        "quantity": 2,
+                        "thumbnail": "../static/images/p3.png",
+                        "type": "Biennial"
+                    }
+                ],
+                "total": 150,
+                "order_date": "2024-10-19T18:11:23.517349",
+                "order_id": "ORD-20241019181123"
+            }
+        ]
+    },
+    {
+        "name": "Jo\u00e3o Souza Silva",
+        "email": "teste@exemplo.us",
+        "id": "cf3bf616-fe45-4895-9b8b-ccf8a6d936be",
+        "password": "$2b$12$wBwaMCVAcnUp0k1NUIx2wuA7Lmz2T4br21VHsM./Ekvj7Z1cfvQg.",
+        "address": "Rua Inexistente, 2000",
+        "phone": "3121286800",
+        "security_question": "Silva"
+    },
+    {
+        "name": "shorok mohamed",
+        "email": "shorokatwa1222@gmail.com",
+        "id": "d9c37191-e1f4-41ab-bc99-217e71d5c674",
+        "password": "$2b$12$kXRuQ6e47bykEsuA4De8euHel0V1aIorOdNGrALC8F9xAkAuV8hfm",
+        "address": "cairo",
+        "phone": "5553428400",
+        "security_question": "Flores"
+    },
+    {
+        "name": "Gottfried Wilhelm Leibniz",
+        "email": "test123@beispiel.de",
+        "id": "8bb7fd2e-82a1-4fb5-a15d-a92242a1d05a",
+        "password": "$2b$12$CgrbOCUWkMBxeGZN6CFzO.LkXDGlM8u//PGCGxsGXqw7g13SKMgwK",
+        "address": "Erfundene Stra\u00dfe 33",
+        "phone": "030303986300",
+        "security_question": "Flores",
+        "wishlist": [
+            2,
+            1
+        ],
+        "cart": {
+            "4": 1
+        },
+        "orders": []
+    },
+    {
+        "name": "Jo\u00e3o Souza Silva",
+        "email": "teste1245@exemplo.us",
+        "id": "b34ed8af-8cfe-4b9d-8cbd-ae60d927ecd7",
+        "password": "$2b$12$6yUsisGKBGvra.IIwokJXeD0z.luJ7jh0oop9ZIoROFGSgrMdr.Ia",
+        "address": "Rua Inexistente, 2000",
+        "phone": "3121286800",
+        "security_question": "Garc\u00eda",
+        "wishlist": [
+            2,
+            4
+        ],
+        "cart": {},
+        "orders": [
+            {
+                "customerInfo": {
+                    "name": "shorok",
+                    "address": "cairo",
+                    "city": "",
+                    "country": "",
+                    "postcode": "",
+                    "phone": "",
+                    "email": "",
+                    "order_notes": ""
+                },
+                "cart": [
+                    {
+                        "description": "Large, colorful blooms perfect for garden landscapes.",
+                        "id": 3,
+                        "inStock": true,
+                        "name": "Hydrangea",
+                        "price": 50,
+                        "quantity": 3,
+                        "thumbnail": "../static/images/p3.png",
+                        "type": "Hydrangea"
+                    },
+                    {
+                        "description": "Elegant tulips available in a variety of colors.",
+                        "id": 4,
+                        "inStock": true,
+                        "name": "Tulip",
+                        "price": 20,
+                        "quantity": 4,
+                        "thumbnail": "../static/images/p4.png",
+                        "type": "Perennial"
+                    },
+                    {
+                        "description": "A classic red rose, symbolizing love and romance.",
+                        "id": 1,
+                        "inStock": true,
+                        "name": "Rose",
+                        "price": 30,
+                        "quantity": 1,
+                        "thumbnail": "../static/images/p1.png",
+                        "type": "Annual"
+                    }
+                ],
+                "total": 260,
+                "order_date": "2024-10-21T12:35:29.049787",
+                "order_id": "ORD-20241021123529"
+            }
+        ]
+    },
+    {
+        "name": "shorok mohamed",
+        "email": "1test@beispiel.de",
+        "id": "80442bfe-0b46-4bb1-9788-c3c27b9f7bef",
+        "password": "$2b$12$A.hnw7PWKkiRR5s6yzb2ceF2UppFNtJeY7IaSVScnq1BmuMSHggc.",
+        "address": "cairo",
+        "phone": "0123456789",
+        "security_question": "Garc\u00eda",
+        "wishlist": [],
+        "cart": {},
+        "orders": []
+    },
+    {
+        "name": "shorok mohamed",
+        "email": "12test@beispiel.de",
+        "id": "13f05389-42f5-47a0-b1af-22b4b8a3789e",
+        "password": "$2b$12$7wlWRk8Jx7MVPWtqJoRwaOfcwLH42FaGx8l6/eZa4/hE5BJ1wylOq",
+        "address": "cairo",
+        "phone": "0123456789",
+        "security_question": "Wilhelm",
+        "wishlist": [],
+        "cart": {},
+        "orders": []
+    },
+    {
+        "name": "shorok mohamed",
+        "email": "21test@beispiel.de",
+        "id": "68a56fef-86b5-4810-a265-56870d5a34fe",
+        "password": "$2b$12$BgdSkmLITu8YTcD3Gojv1O41P6PgXQq2JZAKisrb0bVN7kFF2k4n2",
+        "address": "cairo",
+        "phone": "0123456789",
+        "security_question": "Wilhelm",
+        "wishlist": [],
+        "cart": {},
+        "orders": []
+    },
+    {
+        "name": "shorok mohamed",
+        "email": "552test@beispiel.de",
+        "id": "651b1d3f-bb3e-435e-83e9-8c3e4ce9aeac",
+        "password": "$2b$12$F/n3yLNEQwHp0q19QAaqhuA.Q42hW2KmMfeZYXmNt6H6QxaHlmXyC",
+        "address": "cairo",
+        "phone": "0123456789",
+        "security_question": "Wilhelm",
+        "wishlist": [],
+        "cart": {},
+        "orders": []
+    },
+    {
+        "name": "shorok mohamed",
+        "email": "1256test@beispiel.de",
+        "id": "f23918bf-cbeb-4bbe-9615-f29c5a34fcf7",
+        "password": "$2b$12$7nMgCftMJF504vu79R6wb.sSOS1bYB9BsF0.fyP2yIPDQe2EHlbMe",
+        "address": "cairo",
+        "phone": "5553428400",
+        "security_question": "Wilhelm",
+        "wishlist": [
+            4,
+            3,
+            2
+        ],
+        "cart": {},
+        "orders": []
+    },
+    {
+        "name": "shorok mohamed",
+        "email": "shorokatwa22@gmail.com",
+        "id": "1f1d4b20-79ac-4a87-8795-38fdc8e71075",
+        "password": "$2b$12$mCU.0TSsCxEo/sBnBj1fE.6mBQEjpoUdbMBhWQWiS1I.AP.2q3KOm",
+        "address": "cairo",
+        "phone": "0123456789",
+        "security_question": "Wilhelm",
+        "wishlist": [
+            7,
+            8
+        ],
+        "cart": {
+            "6": 4
+        },
+        "orders": []
+    },
+    {
+        "name": "shorok mohamed",
+        "email": "12sheko147atwa@gmail.com",
+        "id": "33c9ec22-5198-4a4d-a441-760ee4da1815",
+        "password": "$2b$12$KKd.3DtQbztVEpdi7bv5GeFQSayAMWWqYjanbQc1Db2HSX.4CKPSq",
+        "address": "cairo",
+        "phone": "0123456789",
+        "security_question": "Wilhelm",
+        "wishlist": [],
+        "cart": {},
+        "orders": []
+    },
+    {
+        "name": "shorok mohamed",
+        "email": "sharoukmohamed413@yahoo.com",
+        "id": "ed8a4a06-6fe2-4601-9160-7a65a118e1ef",
+        "password": "$2b$12$abn.gczOyojTBQch5DturOKntMx.ex/xhwdoMrxCyzeEDwfxgTP6C",
+        "address": "cairo",
+        "phone": "0123456789",
+        "security_question": "Wilhelm",
+        "wishlist": [],
+        "cart": {},
+        "orders": []
+    },
+    {
+        "name": "shorok mohamed",
+        "email": "test23@beispiel.de",
+        "id": "7578088f-51e2-40a9-ac8b-bb4a587b3d5b",
+        "password": "$2b$12$lGAg/00JdqmiZoHDmKCVLOJanVLHsVS3THkkAezpUPqD/rE1rV2Pu",
+        "address": "cairo",
+        "phone": "0123456789",
+        "security_question": "Wilhelm",
+        "wishlist": [
+            3,
+            2
+        ],
+        "cart": {},
+        "orders": [
+            {
+                "customerInfo": {
+                    "name": "",
+                    "address": "",
+                    "city": "",
+                    "country": "",
+                    "postcode": "",
+                    "phone": "",
+                    "email": "",
+                    "order_notes": ""
+                },
+                "cart": [
+                    {
+                        "description": "Bright yellow sunflowers that bring joy and happiness.",
+                        "id": 2,
+                        "inStock": true,
+                        "name": "SunFlower",
+                        "price": 25,
+                        "quantity": 4,
+                        "thumbnail": "../static/images/p2.png",
+                        "type": "Annual"
+                    }
+                ],
+                "total": 100,
+                "order_date": "2024-10-21T21:30:44.061203",
+                "order_id": "ORD-20241021213044"
+            }
+        ]
+    },
+    {
+        "name": "shorok mohamed",
+        "email": "shorokrashid147@gmail.com",
+        "id": "aff90486-d694-470a-872d-f87e92de595c",
+        "password": "$2b$12$KlP.YSgmtG8smTt7Cjb75ut4qIAZ3eCJNJHl4T4NAnjOgGJ8kWSme",
+        "address": "cairo",
+        "phone": "0123456789",
+        "security_question": "Garc\u00eda",
+        "wishlist": [
+            3,
+            4
+        ],
+        "cart": {},
+        "orders": []
+    },
+    {
+        "name": "shorok mohamed",
+        "email": "shorokrashid1477@gmail.com",
+        "id": "3e5d6a34-603b-4cf9-9ccf-0b40022c8242",
+        "password": "$2b$12$bPWWL3ihkSNc71chr/N/4uzVfGB4zMYmpbou8qukPsSA2tuooM.wu",
+        "address": "cairo",
+        "phone": "0123456789",
+        "security_question": "Flores",
+        "wishlist": [
+            6
+        ],
+        "cart": {},
+        "orders": [
+            {
+                "customerInfo": {
+                    "name": "",
+                    "address": "",
+                    "city": "",
+                    "country": "",
+                    "postcode": "",
+                    "phone": "",
+                    "email": "",
+                    "order_notes": ""
+                },
+                "cart": [
+                    {
+                        "description": "Cheerful white flowers with yellow centers, symbolizing innocence.",
+                        "id": 7,
+                        "inStock": true,
+                        "name": "Daisy",
+                        "price": 15,
+                        "quantity": 1,
+                        "thumbnail": "../static/images/p7.png",
+                        "type": "Annual"
+                    },
+                    {
+                        "description": "Fragrant purple lowers known for their calming properties.",
+                        "id": 5,
+                        "inStock": true,
+                        "name": "Lavender",
+                        "price": 35,
+                        "quantity": 5,
+                        "thumbnail": "../static/images/p5.png",
+                        "type": "Perennial"
+                    }
+                ],
+                "total": 190,
+                "order_date": "2024-10-21T23:30:06.645750",
+                "order_id": "ORD-20241021233006"
+            }
+        ]
+    },
+    {
+        "name": "shams atwa",
+        "email": "shams14@gmail.com",
+        "id": "d3c4f607-f198-42cc-8c5b-8f843d165922",
+        "password": "$2b$12$cEsmWh6/Pas7RE1dNh8D2uoxOS.1Rc3eFQh6kfXs69RR6kt9MOHsG",
+        "address": "cairo",
+        "phone": "0123654789",
+        "security_question": "Silva",
+        "wishlist": [
+            20,
+            16,
+            10,
+            2
+        ],
+        "cart": {
+            "3": 1
+        },
+        "orders": [
+            {
+                "customerInfo": {
+                    "name": "shorok",
+                    "address": "cairo",
+                    "city": "ismailia",
+                    "country": "egypt",
+                    "postcode": "23655",
+                    "phone": "0123456789",
+                    "email": "shamsatwa@gmail.com",
+                    "order_notes": ""
+                },
+                "cart": [
+                    {
+                        "description": "Elegant flowers with glossy evergreen leaves.",
+                        "id": 23,
+                        "inStock": true,
+                        "name": "Camellia",
+                        "price": 58,
+                        "quantity": 2,
+                        "thumbnail": "../static/images/p23.jpg",
+                        "type": "Perennial"
+                    }
+                ],
+                "total": 116,
+                "order_date": "2024-10-22T09:33:35.811578",
+                "order_id": "ORD-20241022093335"
+            },
+            {
+                "customerInfo": {
+                    "name": "shorok",
+                    "address": "cairo",
+                    "city": "ismailia",
+                    "country": "egypt",
+                    "postcode": "556664",
+                    "phone": "0123456789",
+                    "email": "test@beispiel.de",
+                    "order_notes": ""
+                },
+                "cart": [
+                    {
+                        "description": "Large, colorful blooms perfect for garden landscapes.",
+                        "id": 3,
+                        "inStock": true,
+                        "name": "Hydrangea",
+                        "price": 50,
+                        "quantity": 1,
+                        "thumbnail": "../static/images/p3.png",
+                        "type": "Hydrangea"
+                    }
+                ],
+                "total": 50,
+                "order_date": "2024-10-22T10:49:06.557607",
+                "order_id": "ORD-20241022104906"
+            }
+        ]
+    },
+    {
+        "name": "shorok mohamed",
+        "email": "shorok22@gmail.com",
+        "id": "4e30d515-db9d-4451-b740-c5b15f85623a",
+        "password": "$2b$12$ywK6JvYtWqSnM2rUxTyVROq1Z.crLNaoKaygMpqKWR3eMs0RTHgyK",
+        "address": "cairo",
+        "phone": "0123654789",
+        "security_question": "Flores",
+        "wishlist": [
+            17,
+            11
+        ],
+        "cart": {},
+        "orders": [
+            {
+                "customerInfo": {
+                    "name": "shorok",
+                    "address": "cairo",
+                    "city": "maadi",
+                    "country": "egypt",
+                    "postcode": "4242424",
+                    "phone": "0123456789",
+                    "email": "shorok22@gmail.com",
+                    "order_notes": ""
+                },
+                "cart": [
+                    {
+                        "description": "Bright yellow sunflowers that bring joy and happiness.",
+                        "id": 2,
+                        "inStock": true,
+                        "name": "SunFlower",
+                        "price": 25,
+                        "quantity": 1,
+                        "thumbnail": "../static/images/p2.png",
+                        "type": "Annual"
+                    },
+                    {
+                        "description": "Colorful flowers ideal for hanging baskets and shaded areas.",
+                        "id": 19,
+                        "inStock": true,
+                        "name": "Begonia",
+                        "price": 23,
+                        "quantity": 2,
+                        "thumbnail": "../static/images/p19.jpg",
+                        "type": "Annual"
+                    },
+                    {
+                        "description": "Vibrant autumn flowers in a wide range of colors and shapes.",
+                        "id": 9,
+                        "inStock": true,
+                        "name": "Chrysanthemum",
+                        "price": 28,
+                        "quantity": 1,
+                        "thumbnail": "../static/images/p9.png",
+                        "type": "Annual"
+                    }
+                ],
+                "total": 99,
+                "order_date": "2024-10-22T15:22:13.632540",
+                "order_id": "ORD-20241022152213"
+            }
+        ]
+    },
+    {
+        "name": "shorok mohamed",
+        "email": "sharoukmohamed3@yahoo.com",
+        "id": "1e40a65b-23ab-4b0f-b970-2c18daff3b48",
+        "password": "$2b$12$9LtGl7uo34IwP3FawQPAAeZ0LHxTR.R4Ajv7XPSoy1z2xbtKiLx7u",
+        "address": "cairo",
+        "phone": "0123456789",
+        "security_question": "Wilhelm",
+        "wishlist": [
+            3
+        ],
+        "cart": {},
+        "orders": [
+            {
+                "customerInfo": {
+                    "name": "shorok",
+                    "address": "cairo",
+                    "city": "maadi",
+                    "country": "egypt",
+                    "postcode": "563241",
+                    "phone": "6019521325",
+                    "email": "shorokatwa@gmail.com",
+                    "order_notes": ""
+                },
+                "cart": [
+                    {
+                        "description": "Cheerful white flowers with yellow centers, symbolizing innocence.",
+                        "id": 7,
+                        "inStock": true,
+                        "name": "Daisy",
+                        "price": 15,
+                        "quantity": 1,
+                        "thumbnail": "../static/images/p7.png",
+                        "type": "Annual"
+                    },
+                    {
+                        "description": "Exotic and elegant flowers perfect for indoor decoration.",
+                        "id": 6,
+                        "inStock": true,
+                        "name": "Orchid",
+                        "price": 60,
+                        "quantity": 1,
+                        "thumbnail": "../static/images/p6.png",
+                        "type": "Perennial"
+                    },
+                    {
+                        "description": "Large, colorful blooms perfect for garden landscapes.",
+                        "id": 3,
+                        "inStock": true,
+                        "name": "Hydrangea",
+                        "price": 50,
+                        "quantity": 1,
+                        "thumbnail": "../static/images/p3.png",
+                        "type": "Hydrangea"
+                    }
+                ],
+                "total": 125,
+                "order_date": "2024-10-23T09:43:03.570639",
+                "order_id": "ORD-20241023094303"
+            }
+        ]
+    },
+    {
+        "name": "shorok mohamed",
+        "email": "shorok@gmail.com",
+        "id": "a9380946-5541-45ad-9919-8e8f120c3f02",
+        "password": "$2b$12$dYUSnfbc3s2agv4xxjLFfOvdxxa/RoRiia3Q4TltSvuRgz9.LZE9K",
+        "address": "cairo",
+        "phone": "0123456789",
+        "security_question": "Silva",
+        "wishlist": [
+            19,
+            3,
+            4,
+            1
+        ],
+        "cart": {
+            "13": 2,
+            "16": 2,
+            "19": 2
+        },
+        "orders": [
+            {
+                "customerInfo": {
+                    "name": "shorok",
+                    "address": "cairo",
+                    "city": "maadi",
+                    "country": "egypt",
+                    "postcode": "563241",
+                    "phone": "12333",
+                    "email": "shorokatwa@gmail.com",
+                    "order_notes": ""
+                },
+                "cart": [
+                    {
+                        "description": "Vibrant autumn flowers in a wide range of colors and shapes.",
+                        "id": 9,
+                        "inStock": true,
+                        "name": "Chrysanthemum",
+                        "price": 28,
+                        "quantity": 1,
+                        "thumbnail": "../static/images/p9.png",
+                        "type": "Annual"
+                    },
+                    {
+                        "description": "Colorful flowers ideal for hanging baskets and shaded areas.",
+                        "id": 19,
+                        "inStock": true,
+                        "name": "Begonia",
+                        "price": 23,
+                        "quantity": 1,
+                        "thumbnail": "../static/images/p19.jpg",
+                        "type": "Annual"
+                    }
+                ],
+                "total": 51,
+                "order_date": "2024-10-23T11:38:41.884022",
+                "order_id": "ORD-20241023113841"
+            },
+            {
+                "customerInfo": {
+                    "name": "shams",
+                    "address": "cairo",
+                    "city": "maadi",
+                    "country": "egypt",
+                    "postcode": "6565656",
+                    "phone": "6019521325",
+                    "email": "shorokatwa@gmail.com",
+                    "order_notes": ""
+                },
+                "cart": [
+                    {
+                        "description": "Elegant and fragrant flowers available in various colors.",
+                        "id": 8,
+                        "inStock": true,
+                        "name": "Lily",
+                        "price": 40,
+                        "quantity": 1,
+                        "thumbnail": "../static/images/p8.png",
+                        "type": "Perennial"
+                    }
+                ],
+                "total": 40,
+                "order_date": "2024-10-23T11:41:56.784301",
+                "order_id": "ORD-20241023114156"
+            },
+            {
+                "customerInfo": {
+                    "name": "shorok",
+                    "address": "cairo",
+                    "city": "maadi",
+                    "country": "egypt",
+                    "postcode": "646565",
+                    "phone": "6019521325",
+                    "email": "shorokatwa@gmail.com",
+                    "order_notes": ""
+                },
+                "cart": [
+                    {
+                        "description": "Large, colorful blooms perfect for garden landscapes.",
+                        "id": 3,
+                        "inStock": true,
+                        "name": "Hydrangea",
+                        "price": 50,
+                        "quantity": 1,
+                        "thumbnail": "../static/images/p3.png",
+                        "type": "Hydrangea"
+                    },
+                    {
+                        "description": "Cheerful white flowers with yellow centers, symbolizing innocence.",
+                        "id": 7,
+                        "inStock": true,
+                        "name": "Daisy",
+                        "price": 15,
+                        "quantity": 1,
+                        "thumbnail": "../static/images/p7.png",
+                        "type": "Annual"
+                    }
+                ],
+                "total": 65,
+                "order_date": "2024-10-23T11:43:35.196323",
+                "order_id": "ORD-20241023114335"
+            }
+        ]
+    },
+    {
+        "name": "shams atwa",
+        "email": "shams21@gmail.com",
+        "id": "c1ab4f06-29c4-4e76-ac5e-98ee7c9bfd4d",
+        "password": "$2b$12$re9EeTeiEhtkla7O5gTZH.fQoX/5ALtdJN.Kmqhh180LC9qFHn9/e",
+        "address": "cairo",
+        "phone": "0123456789",
+        "security_question": "Silva",
+        "wishlist": [],
+        "cart": {},
+        "orders": [
+            {
+                "customerInfo": {
+                    "name": "shorok",
+                    "address": "ismailia",
+                    "city": "ismailia",
+                    "country": "egypt",
+                    "postcode": "5631412",
+                    "phone": "6019521325",
+                    "email": "shorokatwa@gmail.com",
+                    "order_notes": ""
+                },
+                "cart": [
+                    {
+                        "description": "Elegant tulips available in a variety of colors.",
+                        "id": 4,
+                        "inStock": true,
+                        "name": "Tulip",
+                        "price": 20,
+                        "quantity": 1,
+                        "thumbnail": "../static/images/p4.png",
+                        "type": "Perennial"
+                    },
+                    {
+                        "description": "Fragrant purple lowers known for their calming properties.",
+                        "id": 5,
+                        "inStock": true,
+                        "name": "Lavender",
+                        "price": 35,
+                        "quantity": 2,
+                        "thumbnail": "../static/images/p5.png",
+                        "type": "Perennial"
+                    }
+                ],
+                "total": 90,
+                "order_date": "2024-10-23T12:03:29.557673",
+                "order_id": "ORD-20241023120329"
+            }
+        ]
+    }
+]
