@@ -69,3 +69,12 @@ Instead, all user feedback needs to be visible in the
 browser.
 - [x] All exercises have been completed as per the
 requirements and pushed to the respective GitHub repository.
+
+
+## Branches
+
+### 1. Main Branch
+The main stable branch with fully functional and tested features.
+
+### 2. Test Branch
+Created to refactor the backend into cleaner, modular files. Both branches are kept for stability and future improvements.
